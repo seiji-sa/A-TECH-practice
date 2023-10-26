@@ -10,14 +10,16 @@
 </head>
 <body>
     <header>
-        <h1><img src="images/svg/logo.svg" alt="A-TECH"></h1>
-        <ul>
-            <li><a href="">選べれる理由</a></li>
-            <li><a href="">学習カリキュラム</a></li>
-            <li><a href="">カリキュラムサポート</a></li>
-            <li><a href="">料金</a></li>
-            <li><a href=""><span>無料</span>お問い合わせこちら</a></li>
-        </ul>
+        <h1><a href="index.html"><img src="images/svg/logo.svg" alt="A-TECH"></h1></a>
+        <nav>
+            <ul>
+                <li><a href="">選べれる理由</a></li>
+                <li><a href="">学習カリキュラム</a></li>
+                <li><a href="">カリキュラムサポート</a></li>
+                <li><a href="">料金</a></li>
+                <li><a href=""><span>無料</span>お問い合わせこちら</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
        <div id="hero">
@@ -235,26 +237,27 @@
        <section id="contact">
         <h2>お問い合わせ</h2>
         <p>お気軽にお問い合わせください。</p>
+        <form action=""method="post"></form>
         <dl>
-           <dt>氏名（漢字）</dt>
-           <dl><input type="text"></dl>
-           <dt>氏名（カナ）</dt>
-           <dl><input type="text"></dl>
-           <dt>メールアドレス</dt>
-           <dl><input type="email"></dl>
-           <dt>電話番号</dt>
-           <dl><input type="tel"></dl>
-           <dt>お問合せ内容</dt>
-           <dl><textarea name="" id="" cols="30" rows="10"></textarea></dl>
+           <dt><label for="name-kanji">氏名（漢字）</label></dt>
+           <dd><input type="text" name="name-kanji"></dd>
+           <dt><label for="name-kana">氏名（カナ）</label></dt>
+           <dd><input type="text" name="name-kana"></dd>
+           <dt><label for="mail">メールアドレス</label></dt>
+           <dd><input type="email" name="mail"></dd>
+           <dt><label for="tel">電話番号</label></dt>
+           <dd><input type="tel" name="tel"></dd>
+           <dt><label for="message">お問合せ内容</label></dt>
+           <dd><textarea name="message"></textarea></dd>
         </dl>
         <p><a href="">確認</a></p>
        </section>
     </main>
     <footer>
-        <h1><img src="images/svg/logo.svg" alt="A-TECH"></h1>
+        <div><img src="images/svg/logo.svg" alt="A-TECH"></div>
         <p><a href="">プライバシーポリシー</a></p>
         <div><a href=""><img src="images/S-GATE.png" alt="S-GATE"></a></div>
-        <p>2022&copyA-TECH</p>
+        <small>2022©A-TECH</small>
     </footer>
 </body>
 </html>
