@@ -1,35 +1,14 @@
-@charset "utf-8";
-
-body{
-    font-size: 100%;
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+  }
+  header ul {
+    display: flex;
+  }
+  header ul li a {
+    color: black;
+  }
 }
-
-
-
-ul{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-
-}
-
-
-
-@media (max-width:768px) {
-}
-
-@media (min-width:1024px) {
-    header{
-        display: flex;
-        justify-content: space-between;
-        font-size: 15px;
-    }
-    header ul{
-        display: flex;
-    }
-    header ul li a{
-        color: black;
-    }
-}
+/*# sourceMappingURL=style.css.map */
