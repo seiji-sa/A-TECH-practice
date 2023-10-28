@@ -4,10 +4,16 @@
     padding: 0;
     outline: 1px solid rgba(255, 0, 0, 0.168);
 }
+// カラー変数
+$lightBlue:#39B6FF;
+$black: #333333;
+$paul: #00c7ed;
+$darkBlue: #224377;
+$paul-light-blue:#F2F9FD;
 
 body{
     font-size: 100%;
-    color: var(--black);
+    color: $black;
 }
 
 ul{
@@ -26,11 +32,9 @@ a{
     text-align: center;
 }
 
-:root{
-    --white: #E2E2E2;
-    --black: #333333;
-    --lightBlue:#39B6FF;
-}
+
+
+
 
 header{
     position: fixed;
@@ -42,6 +46,7 @@ header{
     }
     ul{
         display: none;
+
     }
 }
 
@@ -52,14 +57,14 @@ main{
 #hero{
     background: url(../images/mainview_img.png) center ;
     p{
-        background-color:var(--lightBlue);
+        background-color: $lightBlue;
         color: #fff;
         padding: 1rem 3rem;
         border-radius: 8%;
         margin-bottom: 1rem;
     }
     h2{
-        color: #393cff;
+        color: $darkBlue;
     }
     ul{
         display: flex;
@@ -67,15 +72,16 @@ main{
         text-align: center;
 
         li{
-            background-color: var(--lightBlue);
+            background-color: $lightBlue;
             color: #fff;
             border-radius: 8%;
+
         }
     }
 }
 #reason{
-    background-color: var(--lightBlue);
-    color: white;
+    background-color: $lightBlue;
+    color: #fff;
     ul{
         display: flex;
 
@@ -96,7 +102,7 @@ main{
 
 #learn{
     .learn-skills{
-       background-color: var(--lightBlue);
+       background-color: $lightBlue;
        width: 100%;
     }
     ul{
@@ -107,12 +113,12 @@ main{
         li{
             padding: 1rem;
             background-color: #fff;
-            color: var(--lightBlue);
+            color: $lightBlue;
             border-radius: 8%;
         }
     }
     .learn-step{
-        border: 4px solid var(--lightBlue);
+        border: 4px solid $lightBlue;
         border-radius: 8%;
         padding: 1rem 2rem;
     }
@@ -131,12 +137,12 @@ main{
     .support-comment{
         background-color: #fff;
         &>p{
-            color: var(--lightBlue);
+            color: $lightBlue;
         }
         ul{
-            color: white;
+            color: #fff;
             li{
-                background-color: var(--lightBlue);
+                background-color: $lightBlue;
                 border-radius: 8%;
                 p{
                     border-bottom: 2px solid #fff;
@@ -147,18 +153,18 @@ main{
 }
 
 #price{
-    background-color: var(--lightBlue);
+    background-color: $lightBlue;
     h2{
-        color: white;
+        color: #fff;
     }
     .price-course{
-        background-color: white;
+        background-color: #fff;
         border-radius: 8%;
         p:first-child{
-            background-color: var(--lightBlue);
+            background-color: $lightBlue;
         }
         span{
-            background-color: aquamarine;
+            background-color: $paul;
         }
     }
 }
@@ -169,9 +175,38 @@ main{
         img{
             margin: 0 auto;
             border-radius: 50%;
-            border: 3px solid var(--lightBlue);
+            border: 3px solid $lightBlue;
         }
     }
+}
+
+#provide{
+    background-color: $lightBlue;
+    color: #fff;
+
+    .provide-more{
+        display: flex;
+        .more-freely-icon{
+            background-color: #fff;
+        }
+        ul{
+            background-color: #fff;
+            color: $darkBlue;
+        }
+    }
+    .provide-btn{
+        background-color: #fff;
+        text-align: center;
+        padding: 1rem;
+        a{
+            color: $darkBlue;
+        }
+    }
+
+}
+
+#contact{
+    background-color: $paul-light-blue;
 }
 
 
@@ -188,7 +223,7 @@ main{
             li {
                 padding: 1.7rem;
                 &:nth-child(5){
-                    background-color: var(--lightBlue);
+                    background-color: $lightBlue;
                     a{
                         color: #fff;
                     }
