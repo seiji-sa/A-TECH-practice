@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="discription" contenteditable="A-TECHコーディング練習">
     <title>A-TECH</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
@@ -22,7 +23,7 @@
         </nav>
     </header>
     <main>
-       <div id="hero">
+       <div id="hero" class="wrapper">
         <p>未経験からエンジニアを目指したい稼ぎたい時間に縛られず自由に働きたい安定した職種に就きたい</p>
         <h2>
             <span>実践的なプログラミングスクール</span>
@@ -35,8 +36,8 @@
             <li>タイムマネジメントが身に付く</li>
         </ul>
        </div>
-       <section id="reason">
-        <h2>今、エンジニア職につく4つの理由</h2>
+       <section id="reason" class="wrapper">
+        <h2 class="section-title">今、エンジニア職につく4つの理由</h2>
         <p>エンジニアは、今や私たちの生活になくてはならない多くのサービスを提供する職種です。</p>
         <p>ITエンジニアの将来性と需要はますます高まっており、高度なスキルを駆使して活躍できるキャリアパスを実現することで安定して高収入が見込めます。</p>
         <ul>
@@ -58,8 +59,8 @@
             </li>
         </ul>
        </section>
-       <section id="select">
-        <h2>A-TECHが<span>選ばれる理由</span></h2>
+       <section id="select" class="wrapper">
+        <h2 class="section-title">A-TECHが<span>選ばれる理由</span></h2>
             <ul>
                 <li>
                     <div>
@@ -85,10 +86,10 @@
                 </li>
             </ul>
        </section>
-       <section id="learn">
-        <h2>学習カリキュラム</h2>
+       <section id="learn" class="wrapper">
+        <h2 class="section-title">学習カリキュラム</h2>
         <h3>学べるスキル</h3>
-            <div>
+            <div class="learn-skills">
                 <ul>
                     <li>HTML</li>
                     <li>CSS(SCSS)</li>
@@ -100,6 +101,7 @@
                     <li>SQL</li>
                 </ul>
             </div>
+            <p>※学べる言語はコースによって異なります。</p>
         <h3>実践スキル</h3>
         <div>
             <ul>
@@ -112,8 +114,7 @@
                 <li>Git,GitHub</li>
             </ul>
         </div>
-        <p>※学べる言語はコースによって異なります。</p>
-        <div>
+        <div class="learn-step">
             <h4>スキル獲得までのステップ</h4>
             <dl>
                 <dt>1ヶ月目</dt>
@@ -131,8 +132,8 @@
             </dl>
         </div>
        </section>
-       <section id="support">
-        <h2>豊富な<span> カリキュラムサポート</span></h2>
+       <section id="support" class="wrapper">
+        <h2 class="section-title">豊富な<span> カリキュラムサポート</span></h2>
         <ul>
             <li>
                 <img src="images/sprt_img01.png" alt="実務体験">
@@ -165,7 +166,7 @@
                 <p>当スクールのWEB開発事業部で実際に受けている案件を講師陣のサポートのもと遂行していただきます。</p>
             </li>
         </ul>
-        <div>
+        <div class="support-comment">
             <p>実践経験を積んでいる講師・カリキュラムサポートする専属コンサルタントの2人体制で一人の受講生をサポート</p>
             <ul>
                 <li>
@@ -183,9 +184,9 @@
             </ul>
         </div>
        </section>
-       <section id="price">
-        <h2>料金</h2>
-        <div>
+       <section id="price" class="wrapper">
+        <h2 class="section-title">料金</h2>
+        <div class="price-course">
             <p>WEB制作コース</p>
             <p><span>一括・分割</span> 480,000円+税</p>
         </div>
@@ -193,8 +194,8 @@
             <img src="images/price_img.png" alt="料金表">
         </div>
        </section>
-       <section id="voice">
-        <h2>受講生の声</h2>
+       <section id="voice" class="wrapper">
+        <h2 class="section-title">受講生の声</h2>
         <ul>
             <li>
                 <img src="images/voice_icon01.png" alt="受講生の声01">
@@ -202,19 +203,19 @@
                 <p>初めは自己投資が不安だった のですが、すぐに仕事が入ってきて開始から2ヶ月目で お仕事を受けることができました！</p>
             </li>
             <li>
-                <img src="images/voice_icon01.png" alt="受講生の声02">
+                <img src="images/voice_icon02.png" alt="受講生の声02">
                 <p>Y.Sさん 主婦</p>
                 <p>子供の面倒を見ながらだったので中々時間が取れなかったですが、講師陣の手厚いサポートのおかげで続けることができました！</p>
             </li>
             <li>
-                <img src="images/voice_icon01.png" alt="受講生の声03">
+                <img src="images/voice_icon03.png" alt="受講生の声03">
                 <p>T.Nさん 会社員</p>
                 <p>サラリーマンで会社に依存するのが嫌で、プログラミング学習を始めました。最初は不安でしたが手厚いサポートのおかげで案件獲得までいけました！</p>
             </li>
         </ul>
        </section>
-       <section id="provide">
-        <h2><span>一般社団法人MF様へ</span>授業を提供</h2>
+       <section id="provide" class="wrapper section-title">
+        <h2 class="sec"><span>一般社団法人MF様へ</span>授業を提供</h2>
         <div>
             <div><img src="images/svg/more_freely.svg" alt="MoreFreelyの画像"></div>
             <ul>
@@ -234,8 +235,8 @@
             <p><a href="">公式サイトはこちら</a></p>
         </div>
        </section>
-       <section id="contact">
-        <h2>お問い合わせ</h2>
+       <section id="contact" class="wrapper">
+        <h2 class="section-title">お問い合わせ</h2>
         <p>お気軽にお問い合わせください。</p>
         <form action=""method="post">
             <dl>
