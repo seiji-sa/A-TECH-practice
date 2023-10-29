@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid rgba(255, 0, 0, 0.168);
 }
 
 body {
@@ -178,12 +177,44 @@ main {
 #contact {
   background-color: #F2F9FD;
 }
+#contact p {
+  text-align: center;
+}
+#contact form label {
+  color: #224377;
+}
+#contact form input, #contact form textarea {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 8%;
+}
+#contact form p {
+  background-color: #39B6FF;
+}
+
+footer {
+  background-color: #224377;
+  text-align: center;
+}
+footer .A-TECH-logo {
+  background-color: #fff;
+}
+footer p a {
+  color: #fff;
+}
+footer .S-GATE-logo {
+  background-color: #fff;
+}
+footer small {
+  color: #fff;
+}
 
 @media (min-width: 1024px) {
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
   }
   header ul {
     display: flex;
@@ -193,18 +224,19 @@ main {
   header ul li {
     padding: 1.7rem;
   }
+  header ul li a {
+    color: #333333;
+  }
   header ul li:nth-child(5) {
+    border-bottom-left-radius: 1.2rem;
     background-color: #39B6FF;
   }
   header ul li:nth-child(5) a {
     color: #fff;
   }
-  header ul li a {
-    color: var(--black);
-  }
-  header ul li a span {
+  header ul li:nth-child(5) span {
     margin-right: 1rem;
-    color: var(--black);
+    color: #333333;
     padding: 0.7rem;
     border-radius: 20%;
     background-color: #fff;

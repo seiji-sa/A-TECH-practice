@@ -3,20 +3,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid rgba(255, 0, 0, 0.168);
+    // outline: 1px solid rgba(255, 0, 0, 0.168);
 }
 // カラー変数
 $colors:(
     lightBlue: #39B6FF,
     black: #333333,
+    white: #fff,
     paul: #00c7ed,
     darkBlue: #224377,
-    paul-light-blue: #F2F9FD
+    base: #F2F9FD
 );
+@function colors($key) {
+    @return map-get($colors, $key);
+}
 
 body{
     font-size: 100%;
-    color: $black;
+    color: colors(black);
 }
 
 ul{
@@ -35,10 +39,6 @@ a{
     text-align: center;
 }
 
-
-
-
-
 header{
     position: fixed;
         z-index: 2;
@@ -53,6 +53,10 @@ header{
     }
 }
 
+header{
+
+}
+
 main{
     padding-top: 5rem;
 }
@@ -60,14 +64,14 @@ main{
 #hero{
     background: url(../images/mainview_img.png) center ;
     p{
-        background-color: $lightBlue;
-        color: #fff;
+        background-color: colors(lightBlue);
+        color: colors(white);
         padding: 1rem 3rem;
         border-radius: 8%;
         margin-bottom: 1rem;
     }
     h2{
-        color: $darkBlue;
+        color: colors(darkBlue);
     }
     ul{
         display: flex;
@@ -75,16 +79,16 @@ main{
         text-align: center;
 
         li{
-            background-color: $lightBlue;
-            color: #fff;
+            background-color: colors(lightBlue);
+            color: colors(white);
             border-radius: 8%;
 
         }
     }
 }
 #reason{
-    background-color: $lightBlue;
-    color: #fff;
+    background-color: colors(lightBlue);
+    color: colors(white);
     ul{
         display: flex;
 
@@ -105,7 +109,7 @@ main{
 
 #learn{
     .learn-skills{
-       background-color: $lightBlue;
+       background-color: colors(lightBlue);
        width: 100%;
     }
     ul{
@@ -115,13 +119,13 @@ main{
         font-size: 0.9rem;
         li{
             padding: 1rem;
-            background-color: #fff;
-            color: $lightBlue;
+            background-color: colors(white);
+            color: colors(lightBlue);
             border-radius: 8%;
         }
     }
     .learn-step{
-        border: 4px solid $lightBlue;
+        border: 4px solid colors(lightBlue);
         border-radius: 8%;
         padding: 1rem 2rem;
     }
@@ -138,14 +142,14 @@ main{
         }
     }
     .support-comment{
-        background-color: #fff;
+        background-color: colors(white);
         &>p{
-            color: $lightBlue;
+            color: colors(lightBlue);
         }
         ul{
-            color: #fff;
+            color: colors(white);
             li{
-                background-color: $lightBlue;
+                background-color: colors(lightBlue);
                 border-radius: 8%;
                 p{
                     border-bottom: 2px solid #fff;
@@ -156,18 +160,18 @@ main{
 }
 
 #price{
-    background-color: $lightBlue;
+    background-color: colors(lightBlue);
     h2{
-        color: #fff;
+        color: colors(white);
     }
     .price-course{
-        background-color: #fff;
+        background-color: colors(white);
         border-radius: 8%;
         p:first-child{
-            background-color: $lightBlue;
+            background-color: colors(lightBlue);
         }
         span{
-            background-color: $paul;
+            background-color: colors(paul);
         }
     }
 }
@@ -178,38 +182,73 @@ main{
         img{
             margin: 0 auto;
             border-radius: 50%;
-            border: 3px solid $lightBlue;
+            border: 3px solid colors(lightBlue);
         }
     }
 }
 
 #provide{
-    background-color: $lightBlue;
+    background-color: colors(lightBlue);
     color: #fff;
 
     .provide-more{
         display: flex;
         .more-freely-icon{
-            background-color: #fff;
+            background-color: colors(white);
         }
         ul{
-            background-color: #fff;
-            color: $darkBlue;
+            background-color: colors(white);
+            color: colors(darkBlue);
         }
     }
     .provide-btn{
-        background-color: #fff;
+        background-color: colors(white);
         text-align: center;
         padding: 1rem;
         a{
-            color: $darkBlue;
+            color: colors(darkBlue);
         }
     }
 
 }
 
 #contact{
-    background-color: $paul-light-blue;
+    background-color: colors(base);
+    p{
+        text-align: center;
+    }
+    form{
+        label{
+            color: colors(darkBlue);
+        }
+        input,textarea{
+            background-color: #fff;
+            width: 100%;
+            border-radius: 8%;
+        }
+        p{
+            background-color: colors(lightBlue);
+        }
+    }
+}
+
+footer{
+    background-color: colors(darkBlue);
+    text-align: center;
+    .A-TECH-logo{
+        background-color: colors(white);
+    }
+    p{
+        a{
+            color: colors(white);
+        }
+    }
+    .S-GATE-logo{
+        background-color: colors(white);
+    }
+    small{
+        color: colors(white);
+    }
 }
 
 
@@ -218,29 +257,30 @@ main{
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        background-color: rgba(colors(white), .9);
        ul{
             display: flex;
             font-size: 1rem;
             font-weight: bold;
             li {
                 padding: 1.7rem;
-                &:nth-child(5){
-                    background-color: $lightBlue;
-                    a{
-                        color: #fff;
-                    }
-                  }
                 a{
-                    color: var(--black);
+                    color: colors(black);
+                }
+                &:nth-child(5){
+                    border-bottom-left-radius: 1.2rem;
+                    background-color: colors(lightBlue);
+                    a{
+                        color: colors(white);
+                    }
                     span{
                         margin-right: 1rem;
-                        color: var(--black);
+                        color: colors(black);
                         padding: .7rem;
                         border-radius: 20%;
-                        background-color: #fff;
+                        background-color: colors(white);
                     }
-                }
+                  }
             }
         }
     }
