@@ -7,13 +7,13 @@
     <title>A-TECH</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="sass/style.css">
 </head>
 <body>
-    <header>
-        <h1><a href="index.html"><img src="images/svg/logo.svg" alt="A-TECH"></h1></a>
+    <header class="header">
+        <h1 class="header__logo"><a href="index.html"><img src="images/svg/logo.svg" alt="A-TECH"></h1></a>
         <nav>
-            <ul>
+            <ul class="header__list">
                 <li><a href="#reason">選べれる理由</a></li>
                 <li><a href="#learn">学習カリキュラム</a></li>
                 <li><a href="#support">カリキュラムサポート</a></li>
@@ -23,7 +23,7 @@
         </nav>
     </header>
     <main>
-       <div id="hero" class="wrapper">
+       <div id="hero" class="hero wrapper">
         <p><span>未経験からエンジニアを目指したい</span><span>稼ぎたい</span><span>時間に縛られず自由に働きたい</span><span>安定した職種に就きたい</span></p>
         <h2>
             <span>実践的な<br>プログラミングスクール</span>
@@ -39,8 +39,8 @@
 
         </div>
        </div>
-       <section id="reason" class="wrapper">
-        <h2 class="section-title">今、エンジニア職につく<br>4つの理由</h2>
+       <section id="reason" class="l-wrapper">
+        <h2 class="section_title">今、エンジニア職につく<br>4つの理由</h2>
         <p>エンジニアは、今や私たちの生活になくてはならない多くのサービスを提供する職種です。</p>
         <p>ITエンジニアの将来性と需要はますます高まっており、高度なスキルを駆使して活躍できるキャリアパスを実現することで安定して高収入が見込めます。</p>
         <ul>
@@ -62,15 +62,15 @@
             </li>
         </ul>
        </section>
-       <section id="select" class="wrapper">
-        <h2 class="section-title">A-TECHが<span>選ばれる理由</span></h2>
+       <section id="select" class="l-wrapper">
+        <h2 class="section_title">A-TECHが<br>選ばれる理由</br></h2>
             <ul>
                 <li>
                     <div>
-                        <h3><span>現場で即戦力になれる</span> カリキュラム構成</h3>
+                        <h3><br>現場で即戦力になれる</br> カリキュラム構成</h3>
                         <p>プログラミングスキルは基本的には自習でやってもらい、3:7の割合でビジネスにおける学習の比重を大きくしています。実践での経験を積むカリキュラムが多くすることで、スクール卒業後、即戦力になれる人材を育成します。</p>
                     </div>
-                    <img src="images/media_img01.webp" alt="現場で即戦力になれるカリキュラム構成">
+                    <img class="section_img" src="images/media_img01.webp" alt="現場で即戦力になれるカリキュラム構成">
                 </li>
                 <li>
                     <div>
@@ -89,8 +89,8 @@
                 </li>
             </ul>
        </section>
-       <section id="learn" class="wrapper">
-        <h2 class="section-title">学習カリキュラム</h2>
+       <section id="learn" class="l-wrapper">
+        <h2 class="section_title">学習カリキュラム</h2>
         <h3>学べるスキル</h3>
             <div class="learn-skills">
                 <ul>

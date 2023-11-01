@@ -1,8 +1,8 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
-
+const sass = require('gulp-sass')(require('sass'));
 gulp.task('default', function () {
-    gulp.src('css/style.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('css'));
+    gulp.src('sass/**/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('../css'));
 })
+
