@@ -59,7 +59,7 @@ a{
 }
 
 
-.section_title{
+.section__title{
     text-align: center;
 }
 
@@ -124,11 +124,13 @@ a{
         z-index: -1;
     }
 }
-#reason{
+
+
+.section-reason{
     background-color: colors(lightBlue);
     color: colors(white);
     text-align: center;
-    ul{
+    .section-reason__list{
         display: flex;
         flex-wrap: wrap;
         max-width: 400px;
@@ -149,28 +151,57 @@ a{
 }
 
 
-#learn{
-    .learn-skills{
-       background-color: colors(lightBlue);
-       width: 100%;
-    }
-
-    ul{
-        display: flex;
-        justify-content: center;
-        padding: 1rem;
-        font-size: 0.9rem;
-        li{
-            padding: 1rem;
-            background-color: colors(white);
-            color: colors(lightBlue);
-            border-radius: 8%;
+.section-select{
+    .section-select__card{
+        .section__img{
+            border-radius: 2rem;
+            max-width: 400px;
+            box-shadow: 1rem 1rem colors(lightBlue);
         }
     }
+
+}
+.section-learn{
+    .learn-skills__title{
+        color: colors(darkBlue);
+        text-align: center;
+        font-size: 1.7rem;
+    }
+    .learn-skills{
+       background-color: colors(lightBlue);
+       text-align: center;
+       width: 100%;
+       font-size: 0.8rem;
+       font-weight: bold;
+       padding: 1rem;
+       border-radius: 1rem;
+       .learn__skill{
+            display: inline-block;
+            padding: .1rem .3rem;
+            background-color: colors(white);
+            color: colors(lightBlue);
+            border-radius: 1rem;
+           }
+        }
     .learn-step{
         border: 4px solid colors(lightBlue);
-        border-radius: 8%;
-        padding: 1rem 2rem;
+        border-radius: 1rem;
+        .learn-step__title{
+            color: colors(darkBlue);
+            background-color: rgba(colors(paul), .1);
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        .learn-step__content{
+            padding: 1rem 2rem;
+            .learn-step__content_month{
+                display: inline-block;
+                padding: .2rem 2rem;
+                color: colors(lightBlue);
+                border-radius: 1rem;
+                background-color: rgba(colors(paul), .1);
+            }
+        }
     }
 }
 

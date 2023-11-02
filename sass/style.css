@@ -27,7 +27,7 @@ a {
   padding: 0 1rem;
 }
 
-.section_title {
+.section__title {
   text-align: center;
 }
 
@@ -91,50 +91,76 @@ a {
   z-index: -1;
 }
 
-#reason {
+.section-reason {
   background-color: #39B6FF;
   color: #fff;
   text-align: center;
 }
-#reason ul {
+.section-reason .section-reason__list {
   display: flex;
   flex-wrap: wrap;
   max-width: 400px;
   margin: 0 auto;
   gap: 4rem 4%;
 }
-#reason ul li {
+.section-reason .section-reason__list li {
   width: 48%;
 }
-#reason ul li img {
+.section-reason .section-reason__list li img {
   border: 4px solid #fff;
   border-radius: 8%;
   padding: 1rem 2rem;
 }
-#reason ul li p {
+.section-reason .section-reason__list li p {
   margin-bottom: 2rem;
 }
 
-#learn .learn-skills {
+.section-select .section-select__card .section__img {
+  border-radius: 2rem;
+  max-width: 400px;
+  box-shadow: 1rem 1rem #39B6FF;
+}
+
+.section-learn .learn-skills__title {
+  color: #224377;
+  text-align: center;
+  font-size: 1.7rem;
+}
+.section-learn .learn-skills {
   background-color: #39B6FF;
+  text-align: center;
   width: 100%;
-}
-#learn ul {
-  display: flex;
-  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
   padding: 1rem;
-  font-size: 0.9rem;
+  border-radius: 1rem;
 }
-#learn ul li {
-  padding: 1rem;
+.section-learn .learn-skills .learn__skill {
+  display: inline-block;
+  padding: 0.1rem 0.3rem;
   background-color: #fff;
   color: #39B6FF;
-  border-radius: 8%;
+  border-radius: 1rem;
 }
-#learn .learn-step {
+.section-learn .learn-step {
   border: 4px solid #39B6FF;
-  border-radius: 8%;
+  border-radius: 1rem;
+}
+.section-learn .learn-step .learn-step__title {
+  color: #224377;
+  background-color: rgba(0, 199, 237, 0.1);
+  text-align: center;
+  font-size: 1.3rem;
+}
+.section-learn .learn-step .learn-step__content {
   padding: 1rem 2rem;
+}
+.section-learn .learn-step .learn-step__content .learn-step__content_month {
+  display: inline-block;
+  padding: 0.2rem 2rem;
+  color: #39B6FF;
+  border-radius: 1rem;
+  background-color: rgba(0, 199, 237, 0.1);
 }
 
 #support ul {
