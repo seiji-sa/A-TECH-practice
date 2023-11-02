@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid rgba(255, 0, 0, 0.168);
 }
 
 body {
@@ -163,14 +162,26 @@ a {
   background-color: rgba(0, 199, 237, 0.1);
 }
 
-#support ul {
-  display: grid;
-  grid-template-rows: repeat(auto-fix, min-max(1fr, 300px));
+#support {
+  background-color: rgba(173, 216, 230, 0.1);
 }
-#support ul li img {
+#support .support__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+#support .support__items .support__item img {
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: 2px solid #39B6FF;
   margin: 0 auto;
 }
+#support .support__items .support__item .support__item_title {
+  color: #39B6FF;
+}
 #support .support-comment {
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
   background-color: #fff;
 }
 #support .support-comment > p {
@@ -187,87 +198,152 @@ a {
   border-bottom: 2px solid #fff;
 }
 
-#price {
+.section-price {
   background-color: #39B6FF;
 }
-#price h2 {
+.section-price .section__title {
   color: #fff;
 }
-#price .price-course {
+.section-price .price__course {
+  padding: 0.3rem;
   background-color: #fff;
-  border-radius: 8%;
+  border-radius: 1rem;
 }
-#price .price-course p:first-child {
+.section-price .price__course .price__course_title {
+  text-align: center;
+  color: #fff;
+  border-radius: 1rem 1rem 0 0;
   background-color: #39B6FF;
 }
-#price .price-course span {
+.section-price .price__course .price__course_txt {
+  text-align: center;
+  padding: 0.4rem;
+}
+.section-price .price__course span {
+  color: #fff;
   background-color: #00c7ed;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+}
+.section-price .price__img {
+  overflow-x: scroll;
 }
 
-#voice li {
-  text-align: center;
+.section-voice .voice__item {
+  border-radius: 1rem;
+  border: 4px solid #39B6FF;
+  max-width: 250px;
+  margin: 0 auto;
+  padding: 1rem;
 }
-#voice li img {
+.section-voice .voice__item img {
   margin: 0 auto;
   border-radius: 50%;
   border: 3px solid #39B6FF;
 }
+.section-voice .voice__item .voice__item_name {
+  background-color: #39B6FF;
+  text-align: center;
+  color: #fff;
+  border-radius: 1rem;
+  background-color: #39B6FF;
+}
 
-#provide {
+.section-provide {
   background-color: #39B6FF;
   color: #fff;
 }
-#provide .provide-more {
+.section-provide .provide__more-wrapper {
   display: flex;
+  width: calc(100% - 5px);
+  gap: 5px;
+  text-align: center;
 }
-#provide .provide-more .more-freely-icon {
+.section-provide .provide__more-wrapper .more-wrapper_icon {
   background-color: #fff;
+  border-radius: 1rem 0 0 1rem;
+  width: 40%;
 }
-#provide .provide-more ul {
+.section-provide .provide__more-wrapper .more-wrapper_lists {
+  width: 60%;
   background-color: #fff;
   color: #224377;
+  border-radius: 0 1rem 1rem 0;
 }
-#provide .provide-btn {
+.section-provide .more-wrapper_btn-img .more-wrapper_img {
+  border-radius: 2rem;
+  max-width: 300px;
+  box-shadow: 1rem 1rem #00c7ed;
+  margin: 0 auto;
+}
+.section-provide .more-wrapper_btn-img .more-wrapper_btn {
   background-color: #fff;
+  text-align: center;
+  max-width: 200px;
+  padding: 0.3rem;
+  border-radius: 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.section-provide .more-wrapper_btn-img .more-wrapper_btn a {
+  color: #224377;
+}
+
+.section-contact {
+  background-color: #F2F9FD;
+}
+.section-contact p {
+  text-align: center;
+}
+.section-contact form label {
+  color: #224377;
+  font-weight: bold;
+}
+.section-contact form input, .section-contact form textarea {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 1rem;
+  border: 0px solid #000;
+}
+.section-contact form p {
+  background-color: #39B6FF;
+}
+.section-contact form .section__btn {
+  background-color: #39B6FF;
+  text-align: center;
+  max-width: 200px;
+  padding: 0.3rem;
+  border-radius: 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.section-contact form .section__btn a {
+  color: #fff;
+}
+
+.footer {
+  background-color: #224377;
   text-align: center;
   padding: 1rem;
 }
-#provide .provide-btn a {
-  color: #224377;
-}
-
-#contact {
-  background-color: #F2F9FD;
-}
-#contact p {
-  text-align: center;
-}
-#contact form label {
-  color: #224377;
-}
-#contact form input, #contact form textarea {
+.footer .A-TECH-logo {
+  width: 200px;
+  margin: 0 auto;
   background-color: #fff;
-  width: 100%;
-  border-radius: 8%;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
 }
-#contact form p {
-  background-color: #39B6FF;
-}
-
-footer {
-  background-color: #224377;
-  text-align: center;
-}
-footer .A-TECH-logo {
-  background-color: #fff;
-}
-footer p a {
+.footer p a {
   color: #fff;
 }
-footer .S-GATE-logo {
+.footer .S-GATE-logo {
   background-color: #fff;
+  width: 100px;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  margin: 0 auto;
 }
-footer small {
+.footer small {
   color: #fff;
 }
 
