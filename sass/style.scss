@@ -15,9 +15,9 @@ $colors:(
 
 //ブレークポイント
 $breakpoint: (
-    dt:'screen and (max-width: 1024px)',
-    tb:'screen and (max-width: 768px)',
-    ph:'screen and (max-width: 680px)'
+    dt:'screen and (min-width: 1024px)',
+    tb:'screen and (min-width: 768px)',
+    ph:'screen and (min-width: 680px)'
 );
 
 
@@ -26,27 +26,36 @@ $breakpoint: (
         @content;
     }
 }
+@mixin dl(){
+    dl {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+      }
+      dl dt {
+        width: 30%;
+      }
+      dl dd {
+        width: 50%;
+      }
+}
 
 
 // ボタン
 @mixin btn(){
-    background-color: colors(lightBlue);
     text-align: center;
-    max-width: 200px;
+    max-width: 300px;
     padding: .3rem;
     border-radius: 1rem;
     margin: 0 auto;
     text-align: center;
-    a{
-        color: colors(white);
-    }
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // outline: 1px solid rgba(255, 0, 0, 0.168);
+    outline: 1px solid rgba(255, 0, 0, 0.168);
 }
 
 body{
@@ -66,7 +75,6 @@ a{
     text-decoration: none;
     color: colors(black);
 }
-
 .l-wrapper{
     padding: 0 1rem;
 }
@@ -75,7 +83,6 @@ a{
 .section__title{
     text-align: center;
 }
-
 
 .header{
     background-color: rgba(colors(white), .9);
@@ -91,14 +98,16 @@ a{
     }
 }
 
-#hero{
+.hero{
     position: relative;
     text-align: center;
-    height: 100vh;
+    .hero-container{
+        height: 100vh;
+    }
     // margin-top: 5rem headerも適応されて下に配置されるのはなぜ;
     padding-top: 5rem;
-    p{
-        background-color: colors(lightBlue);
+    .hero__txt_small{
+        background-color: rgba(colors(lightBlue), .5);
         color: colors(white);
         padding: 1rem 3rem;
         border-radius: 1rem;
@@ -108,14 +117,14 @@ a{
             width: 100%;
         }
     }
-    h2{
+    .hero__txt_big{
         color: colors(darkBlue);
         span{
             display: inline-block;
             width: 100%;
         }
     }
-    ul{
+    .hero__list{
         display: flex;
         justify-content: center;
         text-align: center;
@@ -165,7 +174,7 @@ a{
 
 
 .section-select{
-    .section-select__card{
+    .section-select__list{
         .section__img{
             border-radius: 2rem;
             max-width: 400px;
@@ -180,7 +189,7 @@ a{
         text-align: center;
         font-size: 1.7rem;
     }
-    .learn-skills{
+    .learn-list{
        background-color: colors(lightBlue);
        text-align: center;
        width: 100%;
@@ -247,7 +256,7 @@ a{
             color: colors(white);
             li{
                 background-color: colors(lightBlue);
-                border-radius: 8%;
+                border-radius: 1rem;
                 p{
                     border-bottom: 2px solid #fff;
                 }
@@ -289,9 +298,7 @@ a{
 }
 
 .section-voice{
-    // .voice__items{
 
-    // }
     .voice__item{
         border-radius: 1rem;
         border: 4px solid colors(lightBlue);
@@ -316,7 +323,7 @@ a{
     background-color: colors(lightBlue);
     color: #fff;
 
-    .provide__more-wrapper{
+    .provide__more-container{
         display: flex;
         width: calc(100% - 5px);
         gap: 5px;
@@ -333,22 +340,17 @@ a{
             border-radius: 0 1rem 1rem 0;
         }
     }
-    .more-wrapper_btn-img{
+    .provide__card_right{
         // 後で必要になるかも
         .more-wrapper_img{
             border-radius: 2rem;
-            max-width: 300px;
+            max-width: 350px;
             box-shadow: 1rem 1rem (colors(paul));
             margin: 0 auto;
         }
         .more-wrapper_btn{
+            @include btn;
             background-color: colors(white);
-            text-align: center;
-            max-width: 200px;
-            padding: .3rem;
-            border-radius: 1rem;
-            margin: 0 auto;
-            text-align: center;
             a{
                 color: colors(darkBlue);
             }
@@ -378,7 +380,10 @@ a{
         }
        .section__btn{
             @include btn;
-
+            background-color: colors(lightBlue);
+            a{
+                color: colors(white);
+            }
         }
     }
 }
@@ -411,13 +416,116 @@ a{
     }
 }
 
+@include mq('tb'){
+
+    .hero{
+        .hero-container{
+            background: url("../images/mainview_img.jpg") 0px 0px /  cover  no-repeat;
+            width: 100%;
+            height: 50vh;
+        }
+        .hero__txt_small{
+            width: 600px;
+            margin: 0 auto;
+            span{
+                width: auto;
+             }
+       }
+       .hero-bg{
+        display: none;
+       }
+    }
+    .section-reason{
+        .section__title{
+            br{
+                display: none;
+            }
+        }
+        .section-reason__list{
+            max-width: 100vw;
+            li{
+                margin: 0 auto;
+                width: 150px;
+            }
+        }
+    }
+    .section-select{
+        .section-select__list{
+            li{
+                display: flex;
+            }
+            li:nth-child(2){
+                flex-direction: column-reverse;
+            }
+
+        }
+    }
+
+    .section-learn{
+        .learn__skill-container{
+            display: flex;
+        }
+        .learn-step__content{
+            // dt、ddを囲む以外で横並びにする方法
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            text-align: center;
+            dd{
+                width: 80%;
+            }
+        }
+    }
+    .section-support{
+        .support-comment__list{
+            display: flex;
+            gap: 30px;
+            width: 100%;
+            li{
+                width: calc(50% - 30px);
+            }
+        }
+    }
+    .section-voice{
+        .voice__list{
+            display: flex;
+        }
+    }
+    .section-provide{
+        .provide__card{
+            display: flex;
+            gap: 20px;
+            .provide__card_left,.provide__card_right{
+                width: calc(50% - 20px);
+            }
+        }
+    }
+    .section-contact{
+        @include dl;
+    }
+
+    .footer{
+        .footer__container{
+            display: flex;
+            justify-content: space-around;
+            .footer__container_right{
+                display: flex;
+            }
+        }
+    }
+}
+
+
+
+
+
 @include mq('dt'){
     .header{
         display: flex;
         justify-content: space-between;
         align-items: center;
         background-color: rgba(colors(white), .9);
-       ul{
+       .header__list{
             display: flex;
             font-size: 1rem;
             font-weight: bold;
@@ -443,6 +551,4 @@ a{
             }
         }
     }
-}
-@media (min-width:1024px) {
 }

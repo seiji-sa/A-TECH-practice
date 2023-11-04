@@ -26,6 +26,7 @@
     "storybook": "^7.5.2"
   },
   "dependencies": {
+    "gulp-sass": "^5.1.0",
     "sass": "^1.69.5"
   }
 }

@@ -24,20 +24,21 @@
     </header>
     <main>
        <div id="hero" class="hero l-wrapper">
-        <p><span>未経験からエンジニアを目指したい</span><span>稼ぎたい</span><span>時間に縛られず自由に働きたい</span><span>安定した職種に就きたい</span></p>
-        <h2>
-            <span>実践的な<br>プログラミングスクール</span>
-            <span>現場で即戦力になる</span>
-            <span>エンジニアへ</span>
-        </h2>
-        <ul>
-            <li>受注から納品までの流れがわかる</li>
-            <li>プロとして抑えるポイントがわかる</li>
-            <li>タイムマネジメントが身に付く</li>
-        </ul>
-        <div class="hero-bg">
+       <div class="hero-container">
+            <p class="hero__txt_small"><span>未経験からエンジニアを目指したい</span><span>稼ぎたい</span><span>時間に縛られず自由に働きたい</span><span>安定した職種に就きたい</span></p>
+            <h2 class="hero__txt_big">
+                <span>実践的な<br>プログラミングスクール</span>
+                <span>現場で即戦力になる</span>
+                <span>エンジニアへ</span>
+            </h2>
+            <ul class="hero__list">
+                <li>受注から納品 <br>までの流れが<br>わかる</li>
+                <li>プロとして抑える<br>ポイントが<br>わかる</li>
+                <li>タイムマ<br>ネジメントが<br>身に付く</li>
+            </ul>
+       </div>
+        <div class="hero-bg"></div>
 
-        </div>
        </div>
        <section id="reason" class="section-reason l-wrapper">
         <h2 class="section__title">今、エンジニア職につく<br>4つの理由</h2>
@@ -64,7 +65,7 @@
        </section>
        <section id="select" class="section-select l-wrapper">
         <h2 class="section__title">A-TECHが<br>選ばれる理由</br></h2>
-            <ul class="section-select__card">
+            <ul class="section-select__list">
                 <li>
                     <div>
                         <h3>現場で即戦力になれる<br>カリキュラム構成</h3>
@@ -91,29 +92,33 @@
        </section>
        <section id="learn" class="section-learn l-wrapper">
         <h2 class="section__title">学習カリキュラム</h2>
-        <h3 class="learn-skills__title">学べるスキル</h3>
-            <ul class="learn-skills">
-                <li class="learn__skill">HTML</li>
-                <li class="learn__skill">CSS(SCSS)</li>
-                <li class="learn__skill">JavaScript</li>
-                <li class="learn__skill">JQuery</li>
-                <li class="learn__skill">PHP</li>
-                <li class="learn__skill">WordPress</li>
-                <li class="learn__skill">Java</li>
-                <li class="learn__skill">SQL</li>
-            </ul>
-            <p>※学べる言語はコースによって異なります。</p>
-        <h3 class="learn-skills__title">実践スキル</h3>
-        <div class="learn-skills">
-            <ul>
-                <li class="learn__skill">SEO対策</li>
-                <li class="learn__skill">CSS設計</li>
-                <li class="learn__skill">納品完了までのチェック項目</li>
-                <li class="learn__skill">タイムマネジメント</li>
-                <li class="learn__skill">サーバー関係</li>
-                <li class="learn__skill"> デザインツールの使い方</li>
-                <li class="learn__skill">Git,GitHub</li>
-            </ul>
+        <div class="learn__skill-container">
+           <div class="learn__card_left">
+                <h3 class="learn-skills__title">学べるスキル</h3>
+                <ul class="learn-list">
+                    <li class="learn__skill">HTML</li>
+                    <li class="learn__skill">CSS(SCSS)</li>
+                    <li class="learn__skill">JavaScript</li>
+                    <li class="learn__skill">JQuery</li>
+                    <li class="learn__skill">PHP</li>
+                    <li class="learn__skill">WordPress</li>
+                    <li class="learn__skill">Java</li>
+                    <li class="learn__skill">SQL</li>
+                </ul>
+                <p>※学べる言語はコースによって異なります。</p>
+           </div>
+            <div class="learn__card_right">
+                <h3 class="learn-skills__title">実践スキル</h3>
+                <ul class="learn-list">
+                    <li class="learn__skill">SEO対策</li>
+                    <li class="learn__skill">CSS設計</li>
+                    <li class="learn__skill">納品完了までのチェック項目</li>
+                    <li class="learn__skill">タイムマネジメント</li>
+                    <li class="learn__skill">サーバー関係</li>
+                    <li class="learn__skill"> デザインツールの使い方</li>
+                    <li class="learn__skill">Git,GitHub</li>
+                </ul>
+            </div>
         </div>
         <div class="learn-step">
             <h4 class="learn-step__title">スキル獲得までのステップ</h4>
@@ -169,7 +174,7 @@
         </ul>
         <div class="support-comment">
             <p>実践経験を積んでいる講師・カリキュラムサポートする専属コンサルタントの2人体制で一人の受講生をサポート</p>
-            <ul>
+            <ul class="support-comment__list">
                 <li>
                     <p>講師からのコメント</p>
                     <p>レッスンでは、おひとりおひとりの伸びポイントやつまづきポイントをアドバイスしながら、生徒様のペースに合わせて、学習を進めていきます。
@@ -197,7 +202,7 @@
        </section>
        <section id="voice" class="section-voice l-wrapper">
         <h2 class="section__title">受講生の声</h2>
-        <ul class="voice__items">
+        <ul class="voice__list">
             <li class="voice__item">
                 <img src="images/voice_icon01.png" alt="受講生の声01">
                 <p class="voice__item_name">A.Wさん 大学生</p>
@@ -217,24 +222,28 @@
        </section>
        <section id="provide" class="section-provide l-wrapper">
         <h2 class="section__title">一般社団法人MF様へ <br>授業を提供</h2>
-        <div class="provide__more-wrapper">
-            <div class="more-wrapper_icon"><img src="images/svg/more_freely.svg" alt="MoreFreelyの画像"></div>
-            <ul class="more-wrapper_lists">
-                <li>もっと自由な学びへ</li>
-                <li>もっと自由な生活へ</li>
-                <li>もっと自由な社会へ</li>
-            </ul>
-        </div>
-        <div>
-            <p>一般社団法人MFとは上記のビジョンに掲げ、不登校の子供達に授業を提供、女性が安心して働ける場所の紹介や障がい者と健常者が活躍し地域に根付いたコミュニティー形成等を行っている団体です。</p>
-            <p>今回、そんなMF様にA-TECHのプログラミング授業を提供させていただくことになりました。</p>
-            <p>弊社の強みである、プログラミング教育を不登校の子供達に提供することで、少しでも彼ら彼女らの将来の助けになれば良いなと思いました。</p>
-            <p>今後とも、プログラミング教育をたくさんの人に広めることに努めてまいります。</p>
-        </div>
-        <div class="more-wrapper_btn-img">
-            <img class="more-wrapper_img" src="images/corporation_img.jpg" alt="子供達のタブレットを使用した授業風景">
-            <p class="more-wrapper_btn"><a href="#">公式サイトはこちら</a></p>
-        </div>
+       <div class="provide__card">
+            <div class="provide__card_left">
+                <div class="provide__more-container">
+                    <div class="more-wrapper_icon"><img src="images/svg/more_freely.svg" alt="MoreFreelyの画像"></div>
+                    <ul class="more-wrapper_lists">
+                        <li>もっと自由な学びへ</li>
+                        <li>もっと自由な生活へ</li>
+                        <li>もっと自由な社会へ</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>一般社団法人MFとは上記のビジョンに掲げ、不登校の子供達に授業を提供、女性が安心して働ける場所の紹介や障がい者と健常者が活躍し地域に根付いたコミュニティー形成等を行っている団体です。</p>
+                    <p>今回、そんなMF様にA-TECHのプログラミング授業を提供させていただくことになりました。</p>
+                    <p>弊社の強みである、プログラミング教育を不登校の子供達に提供することで、少しでも彼ら彼女らの将来の助けになれば良いなと思いました。</p>
+                    <p>今後とも、プログラミング教育をたくさんの人に広めることに努めてまいります。</p>
+                </div>
+            </div>
+            <div class="provide__card_right">
+                <img class="more-wrapper_img" src="images/corporation_img.jpg" alt="子供達のタブレットを使用した授業風景">
+                <p class="more-wrapper_btn"><a href="#">公式サイトはこちら</a></p>
+            </div>
+       </div>
        </section>
        <section id="contact" class="section-contact l-wrapper">
         <h2 class="section__title">お問い合わせ</h2>
@@ -257,9 +266,13 @@
        </section>
     </main>
     <footer class="footer">
-        <div class="A-TECH-logo"><img src="images/svg/logo.svg" alt="A-TECH"></div>
-        <p><a href="">プライバシーポリシー</a></p>
-        <div class="S-GATE-logo"><a href="index.html"><img src="images/S-GATE.png" alt="S-GATE"></a></div>
+        <div class="footer__container">
+            <div class="A-TECH-logo"><img src="images/svg/logo.svg" alt="A-TECH"></div>
+            <div class="footer__container_right">
+                <p><a href="">プライバシーポリシー</a></p>
+                <div class="S-GATE-logo"><a href="index.html"><img src="images/S-GATE.png" alt="S-GATE"></a></div>
+            </div>
+        </div>
         <small>2022&copy;A-TECH</small>
     </footer>
 </body>
