@@ -51,14 +51,15 @@ a {
   padding-top: 5rem;
 }
 .hero .hero-container {
-  height: 100vh;
+  height: 130vh;
 }
 .hero .hero__txt_small {
   background-color: rgba(57, 182, 255, 0.5);
   color: #fff;
-  padding: 1rem 3rem;
+  padding: 0.1rem 3rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
+  font-size: 0.9rem;
 }
 .hero .hero__txt_small span {
   display: inline-block;
@@ -71,26 +72,41 @@ a {
   display: inline-block;
   width: 100%;
 }
+.hero .hero__txt_big span:nth-child(1) {
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+.hero .hero__txt_big span:nth-child(2) {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.hero .hero__txt_big span:nth-child(3) {
+  font-weight: 100;
+}
 .hero .hero__list {
   display: flex;
   justify-content: center;
   text-align: center;
   gap: 1rem;
+  margin-top: 2rem;
 }
 .hero .hero__list li {
   background-color: #39B6FF;
   color: #fff;
   padding: 1rem;
   border-radius: 1rem;
+  font-size: 0.7rem;
+  line-height: 1.3;
+  width: 30%;
+  z-index: 1;
 }
 .hero .hero-bg {
-  background: url("../images/mainview_img.jpg") -300px 10px/cover no-repeat;
+  background: url("../images/mainview_img.jpg") -220px 0px/cover no-repeat;
   position: absolute;
   bottom: 0;
   right: 0;
   width: 90%;
-  height: 60%;
-  z-index: -1;
+  height: 50%;
 }
 
 .section-reason {
@@ -98,8 +114,12 @@ a {
   color: #fff;
   text-align: center;
 }
+.section-reason .section__title {
+  padding: 2rem;
+}
 .section-reason .section-reason__list {
   display: flex;
+  align-items: flex-end;
   flex-wrap: wrap;
   max-width: 400px;
   margin: 0 auto;
@@ -117,10 +137,35 @@ a {
   margin-bottom: 2rem;
 }
 
+.section-select {
+  background-color: rgba(173, 216, 230, 0.1);
+  counter-reset: number 0;
+}
+.section-select .section-select__list h3 {
+  position: relative;
+  padding-left: 3rem;
+}
+.section-select .section-select__list h3::before {
+  position: absolute;
+  counter-increment: number 1;
+  content: counter(number);
+  left: 15px;
+  font-size: 3rem;
+  bottom: 10px;
+}
 .section-select .section-select__list .section__img {
   border-radius: 2rem;
-  max-width: 400px;
+  width: calc(100% - 30px);
+  margin: 0 auto;
   box-shadow: 1rem 1rem #39B6FF;
+}
+
+.bg-triangle {
+  width: auto;
+  height: 0;
+  border-style: solid;
+  border-width: 100px 100px 0 100px;
+  border-color: #007bff transparent transparent transparent;
 }
 
 .section-learn .learn-skills__title {
@@ -231,6 +276,9 @@ a {
 .section-price .price__img {
   overflow-x: scroll;
 }
+.section-price .price__img img {
+  max-width: 760px;
+}
 
 .section-voice .voice__item {
   border-radius: 1rem;
@@ -260,14 +308,20 @@ a {
   display: flex;
   width: calc(100% - 5px);
   gap: 5px;
-  text-align: center;
 }
 .section-provide .provide__more-container .more-wrapper_icon {
   background-color: #fff;
   border-radius: 1rem 0 0 1rem;
   width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-provide .provide__more-container .more-wrapper_icon img {
+  display: inline;
 }
 .section-provide .provide__more-container .more-wrapper_lists {
+  text-align: center;
   width: 60%;
   background-color: #fff;
   color: #224377;
@@ -380,7 +434,7 @@ a {
     display: flex;
   }
   .section-select .section-select__list li:nth-child(2) {
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
   }
   .section-learn .learn__skill-container {
     display: flex;
