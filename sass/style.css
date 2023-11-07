@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid rgba(255, 0, 0, 0.168);
 }
 
 body {
@@ -113,6 +112,7 @@ a {
   background-color: #39B6FF;
   color: #fff;
   text-align: center;
+  padding-bottom: 3rem;
 }
 .section-reason .section__title {
   padding: 2rem;
@@ -141,6 +141,9 @@ a {
   background-color: rgba(173, 216, 230, 0.1);
   counter-reset: number 0;
 }
+.section-select .section-select__list .list__item {
+  margin-bottom: 3rem;
+}
 .section-select .section-select__list h3 {
   position: relative;
   padding-left: 3rem;
@@ -149,9 +152,11 @@ a {
   position: absolute;
   counter-increment: number 1;
   content: counter(number);
-  left: 15px;
-  font-size: 3rem;
-  bottom: 10px;
+  left: 0%;
+  bottom: 15px;
+  color: #39B6FF;
+  font-size: 4rem;
+  font-weight: 100;
 }
 .section-select .section-select__list .section__img {
   border-radius: 2rem;
@@ -164,8 +169,8 @@ a {
   width: auto;
   height: 0;
   border-style: solid;
-  border-width: 100px 100px 0 100px;
-  border-color: #007bff transparent transparent transparent;
+  border-width: 150px 280px 0 280px;
+  border-color: rgba(173, 216, 230, 0.1) transparent transparent transparent;
 }
 
 .section-learn .learn-skills__title {
