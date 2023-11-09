@@ -55,7 +55,7 @@ $breakpoint: (
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // outline: 1px solid rgba(255, 0, 0, 0.168);
+    outline: 1px solid rgba(255, 0, 0, 0.168);
 }
 
 body{
@@ -86,6 +86,8 @@ a{
 }
 
 .header{
+    display: flex;
+    justify-content: space-between;
     background-color: rgba(colors(white), .9);
     position: fixed;
     z-index: 2;
@@ -96,6 +98,12 @@ a{
     }
     .header__list{
         display: none;
+    }
+    .humberger-menu{
+        width: 90px;
+        height: 65px;
+        border-radius: 0 0 0 1rem;
+        background-color: colors(lightBlue);
     }
 }
 
@@ -229,7 +237,7 @@ a{
     width: auto;
     height: 0;
     border-style: solid;
-    border-width: 150px 280px 0 280px;
+    border-width: 100px 180px 0px 180px;
     border-color: rgba((lightBlue), .1)transparent transparent transparent;
 
 }
@@ -610,6 +618,9 @@ a{
                     }
                   }
             }
+        }
+        .humberger-menu{
+            display: none;
         }
     }
 }
