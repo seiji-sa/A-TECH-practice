@@ -24,11 +24,16 @@ a {
 }
 
 .l-wrapper {
-  padding: 0 1rem;
+  padding: 2.3rem 0.9rem;
 }
 
 .section__title {
   text-align: center;
+  margin-bottom: 1.7rem;
+}
+
+strong {
+  font-weight: bold;
 }
 
 .header {
@@ -56,9 +61,9 @@ a {
 .hero {
   position: relative;
   text-align: center;
-  padding-top: 5rem;
 }
 .hero .hero-container {
+  margin-top: 4rem;
   height: 130vh;
 }
 .hero .hero__txt_small {
@@ -123,8 +128,8 @@ a {
   text-align: center;
   padding-bottom: 3rem;
 }
-.section-reason .section__title {
-  padding: 2rem;
+.section-reason .section-reason__txt {
+  margin: 1.7rem 0;
 }
 .section-reason .section-reason__list {
   display: flex;
@@ -150,14 +155,17 @@ a {
   background-color: rgba(173, 216, 230, 0.1);
   counter-reset: number 0;
 }
-.section-select .section-select__list .list__item {
-  margin-bottom: 3rem;
+.section-select .section__title strong {
+  font-size: 2rem;
 }
-.section-select .section-select__list h3 {
+.section-select .section-select__list .list__item {
+  margin: 15px 0;
+}
+.section-select .section-select__list .list__item-txt_title {
   position: relative;
   padding-left: 3rem;
 }
-.section-select .section-select__list h3::before {
+.section-select .section-select__list .list__item-txt_title::before {
   position: absolute;
   counter-increment: number 1;
   content: counter(number);
@@ -167,11 +175,14 @@ a {
   font-size: 4rem;
   font-weight: 100;
 }
+.section-select .section-select__list .list__item-txt_article {
+  margin-top: 15px;
+}
 .section-select .section-select__list .section__img {
   border-radius: 2rem;
   width: calc(100% - 30px);
-  margin: 0 auto;
-  box-shadow: 1rem 1rem #39B6FF;
+  margin: 2rem 10px 3rem;
+  box-shadow: 10px 10px rgba(57, 182, 255, 0.8);
 }
 
 .bg-triangle {
@@ -182,10 +193,17 @@ a {
   border-color: rgba(173, 216, 230, 0.1) transparent transparent transparent;
 }
 
-.section-learn .learn-skills__title {
+.section-learn .learn-skill__title {
   color: #224377;
   text-align: center;
   font-size: 1.7rem;
+  margin-bottom: 0.82rem;
+}
+.section-learn .learn__card_left, .section-learn .learn__card_right, .section-learn .learn-step {
+  margin-bottom: 3rem;
+}
+.section-learn .learn__card_cautionary {
+  margin-top: 1.3rem;
 }
 .section-learn .learn-list {
   background-color: #39B6FF;
@@ -195,13 +213,15 @@ a {
   font-weight: bold;
   padding: 1rem;
   border-radius: 1rem;
+  line-height: 2.5rem;
 }
 .section-learn .learn-list .learn__skill {
   display: inline-block;
-  padding: 0.1rem 0.3rem;
+  padding: 0 0.3rem;
   background-color: #fff;
   color: #39B6FF;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
+  margin: 0 0.1rem;
 }
 .section-learn .learn-step {
   border: 4px solid #39B6FF;
@@ -212,6 +232,7 @@ a {
   background-color: rgba(0, 199, 237, 0.1);
   text-align: center;
   font-size: 1.3rem;
+  padding: 0.5rem;
 }
 .section-learn .learn-step .learn-step__content {
   padding: 1rem 2rem;
@@ -223,21 +244,25 @@ a {
   border-radius: 1rem;
   background-color: rgba(0, 199, 237, 0.1);
 }
+.section-learn .learn-step .learn-step__content .learn-step__content_txt {
+  padding: 0.5rem 0 0.6rem;
+}
 
 #support {
-  background-color: rgba(173, 216, 230, 0.1);
+  background-color: rgba(161, 227, 255, 0.1);
 }
-#support .support__items {
+#support .support__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-bottom: 3rem;
 }
-#support .support__items .support__item img {
+#support .support__list .support__item img {
   padding: 0.5rem;
   border-radius: 50%;
   border: 2px solid #39B6FF;
-  margin: 0 auto;
+  margin: 1.5rem auto;
 }
-#support .support__items .support__item .support__item_title {
+#support .support__list .support__item .support__item_title {
   color: #39B6FF;
 }
 #support .support-comment {
@@ -246,17 +271,23 @@ a {
   text-align: center;
   background-color: #fff;
 }
-#support .support-comment > p {
+#support .support-comment .support-comment__txt_top {
   color: #39B6FF;
+  margin-bottom: 2rem;
 }
-#support .support-comment ul {
+#support .support-comment .support-comment__list {
   color: #fff;
 }
-#support .support-comment ul li {
+#support .support-comment .support-comment__list li {
   background-color: #39B6FF;
   border-radius: 1rem;
+  margin-bottom: 2rem;
 }
-#support .support-comment ul li p {
+#support .support-comment .support-comment__list li P {
+  padding: 0 1.2rem 1.2rem;
+}
+#support .support-comment .support-comment__list li .support-comment__list_title {
+  padding: 1rem 0 0.5rem;
   border-bottom: 2px solid #fff;
 }
 
@@ -270,22 +301,29 @@ a {
   padding: 0.3rem;
   background-color: #fff;
   border-radius: 1rem;
+  margin-bottom: 2rem;
 }
 .section-price .price__course .price__course_title {
   text-align: center;
   color: #fff;
   border-radius: 1rem 1rem 0 0;
   background-color: #39B6FF;
+  font-weight: bold;
+  padding: 0.5rem;
 }
 .section-price .price__course .price__course_txt {
   text-align: center;
-  padding: 0.4rem;
+  padding: 1rem 0.4rem;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 .section-price .price__course span {
+  font-size: 0.9rem;
   color: #fff;
   background-color: #00c7ed;
-  padding: 0.4rem;
-  border-radius: 0.4rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
 }
 .section-price .price__img {
   overflow-x: scroll;
@@ -298,15 +336,16 @@ a {
   border-radius: 1rem;
   border: 4px solid #39B6FF;
   max-width: 250px;
-  margin: 0 auto;
+  margin: 0 auto 4rem;
   padding: 1rem;
 }
 .section-voice .voice__item img {
-  margin: 0 auto;
+  margin: 0 auto 15px;
   border-radius: 50%;
   border: 3px solid #39B6FF;
 }
 .section-voice .voice__item .voice__item_name {
+  margin-bottom: 15px;
   background-color: #39B6FF;
   text-align: center;
   color: #fff;
@@ -318,12 +357,17 @@ a {
   background-color: #39B6FF;
   color: #fff;
 }
-.section-provide .provide__more-container {
+.section-provide .provide__card {
+  display: grid;
+  gap: 15px;
+}
+.section-provide .provide__card .provide__more-container {
   display: flex;
   width: calc(100% - 5px);
   gap: 5px;
+  margin-bottom: 15px;
 }
-.section-provide .provide__more-container .more-wrapper_icon {
+.section-provide .provide__card .provide__more-container .more-wrapper_icon {
   background-color: #fff;
   border-radius: 1rem 0 0 1rem;
   width: 40%;
@@ -331,32 +375,32 @@ a {
   justify-content: center;
   align-items: center;
 }
-.section-provide .provide__more-container .more-wrapper_icon img {
+.section-provide .provide__card .provide__more-container .more-wrapper_icon img {
   display: inline;
 }
-.section-provide .provide__more-container .more-wrapper_lists {
+.section-provide .provide__card .provide__more-container .more-wrapper_lists {
   text-align: center;
   width: 60%;
   background-color: #fff;
   color: #224377;
   border-radius: 0 1rem 1rem 0;
 }
-.section-provide .provide__card_right .more-wrapper_img {
+.section-provide .provide__card .provide__card_right .more-wrapper_img {
   border-radius: 2rem;
   max-width: 350px;
-  box-shadow: 1rem 1rem #00c7ed;
+  box-shadow: 10px 10px 0 #a1e3ff;
   margin: 0 auto;
 }
-.section-provide .provide__card_right .more-wrapper_btn {
+.section-provide .provide__card .provide__card_right .more-wrapper_btn {
   text-align: center;
   max-width: 300px;
-  padding: 0.3rem;
-  border-radius: 1rem;
-  margin: 0 auto;
+  padding: 0.8rem 0.3rem;
+  border-radius: 2rem;
+  margin: 15px auto 0;
   text-align: center;
   background-color: #fff;
 }
-.section-provide .provide__card_right .more-wrapper_btn a {
+.section-provide .provide__card .provide__card_right .more-wrapper_btn a {
   color: #224377;
 }
 
@@ -375,6 +419,10 @@ a {
   width: 100%;
   border-radius: 1rem;
   border: 0px solid #000;
+  margin-bottom: 15px;
+}
+.section-contact form .form__name {
+  margin-bottom: 15px;
 }
 .section-contact form p {
   background-color: #39B6FF;
@@ -382,9 +430,9 @@ a {
 .section-contact form .section__btn {
   text-align: center;
   max-width: 300px;
-  padding: 0.3rem;
-  border-radius: 1rem;
-  margin: 0 auto;
+  padding: 0.8rem 0.3rem;
+  border-radius: 2rem;
+  margin: 15px auto 0;
   text-align: center;
   background-color: #39B6FF;
 }
@@ -397,24 +445,32 @@ a {
   text-align: center;
   padding: 1rem;
 }
-.footer .A-TECH-logo {
-  width: 200px;
+.footer .footer__container {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.footer .footer__container .A-TECH-logo {
+  width: 250px;
   margin: 0 auto;
   background-color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   border-radius: 1rem;
 }
-.footer p a {
+.footer .footer__container .A-TECH-logo img {
+  margin: 0 auto;
+}
+.footer .footer__container p a {
   color: #fff;
 }
-.footer .S-GATE-logo {
+.footer .footer__container .S-GATE-logo {
   background-color: #fff;
   width: 100px;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   margin: 0 auto;
 }
-.footer small {
+.footer .copy {
   color: #fff;
 }
 
@@ -444,14 +500,23 @@ a {
     margin: 0 auto;
     width: 150px;
   }
-  .section-select .section-select__list li {
+  .section-select .section-select__list .list__item {
     display: flex;
+    gap: 15px;
   }
-  .section-select .section-select__list li:nth-child(2) {
+  .section-select .section-select__list .list__item:nth-child(odd) {
     flex-direction: row-reverse;
+  }
+  .section-select .section-select__list .list__item .section__img {
+    margin-top: 0;
+    width: 350px;
   }
   .section-learn .learn__skill-container {
     display: flex;
+    gap: 30px;
+  }
+  .section-learn .learn__skill-container .learn__card_left, .section-learn .learn__skill-container .learn__card_right {
+    width: calc(50% - 30px);
   }
   .section-learn .learn-step__content {
     display: flex;
@@ -461,14 +526,22 @@ a {
   }
   .section-learn .learn-step__content dd {
     width: 80%;
+    text-align: left;
+  }
+  .section-support .section__title br {
+    display: none;
   }
   .section-support .support-comment__list {
     display: flex;
     gap: 30px;
     width: 100%;
   }
-  .section-support .support-comment__list li {
+  .section-support .support-comment__list .support-comment__item {
     width: calc(50% - 30px);
+  }
+  .section-price .price__course {
+    width: 50%;
+    margin: 0 auto 60px;
   }
   .section-voice .voice__list {
     display: flex;
