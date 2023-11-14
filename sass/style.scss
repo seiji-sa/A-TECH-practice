@@ -663,6 +663,9 @@ strong{
 
 
 @include mq('dt'){
+    .l-wrapper{
+        padding: 5rem 10rem 0;
+    }
     .header{
         display: flex;
         justify-content: space-between;
@@ -697,4 +700,31 @@ strong{
             display: none;
         }
     }
+    .hero{
+        position: relative;
+        .hero-container{
+            .section-reason__list{
+            }
+        }
+        .hero-bg{
+
+        }
+    }
+    .section-reason{
+        .reason__container{
+            width: 1000px;
+            margin: 0 auto;
+            padding: 0 0 60px;
+            .section-reason__list{
+                img{
+                    // max-width: 230px;
+                }
+            }
+        }
+    }
+    .section-select{
+        width: 1200px;
+        margin: 0 auto;
+    }
+
 }

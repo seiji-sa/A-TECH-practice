@@ -573,6 +573,9 @@ strong {
   }
 }
 @media screen and (min-width: 1024px) {
+  .l-wrapper {
+    padding: 5rem 10rem 0;
+  }
   .header {
     display: flex;
     justify-content: space-between;
@@ -606,6 +609,18 @@ strong {
   }
   .header .humberger-menu {
     display: none;
+  }
+  .hero {
+    position: relative;
+  }
+  .section-reason .reason__container {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 0 60px;
+  }
+  .section-select {
+    width: 1200px;
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
