@@ -30,8 +30,8 @@ $breakpoint: (
 @mixin dl(){
     dl {
         display: flex;
-        flex-wrap: wrap;
         text-align: center;
+        flex-wrap: wrap;
       }
       dl dt {
         width: 30%;
@@ -44,10 +44,9 @@ $breakpoint: (
 
 // ボタン
 @mixin btn(){
-    text-align: center;
     max-width: 300px;
-    padding: .8rem .3rem;
     border-radius: 2rem;
+    padding: .8rem .3rem;
     margin: 15px auto 0;
     text-align: center;
 }
@@ -73,8 +72,8 @@ ul{
 }
 
 a{
-    text-decoration: none;
     color: colors(black);
+    text-decoration: none;
 }
 .l-wrapper{
     padding: 2.3rem .9rem;
@@ -91,13 +90,14 @@ strong{
 }
 
 .header{
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(colors(white), .9);
-    position: fixed;
-    z-index: 2;
     width: 100%;
     height: 5rem;
+    background-color: rgba(colors(white), .9);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 2;
     .header__logo{
         padding: 1rem;
     }
@@ -121,12 +121,12 @@ strong{
     }
     // margin-top: 5rem headerも適応されて下に配置されるのはなぜ;
     .hero__txt_small{
+        font-size: .9rem;
+        border-radius: 1rem;
         background-color: rgba(colors(lightBlue), .5);
         color: colors(white);
         padding: .1rem 3rem;
-        border-radius: 1rem;
         margin-bottom: 1rem;
-        font-size: .9rem;
         span{
             display: inline-block;
             width: 100%;
@@ -135,8 +135,8 @@ strong{
     .hero__txt_big{
         color: colors(darkBlue);
         span{
-            display: inline-block;
             width: 100%;
+            display: inline-block;
             &:nth-child(1){
                 font-weight: 100;
                 font-size: 1.2rem;
@@ -157,24 +157,24 @@ strong{
         gap: 1rem;
         margin-top: 2rem;
         li{
-            background-color: colors(lightBlue);
-            color: colors(white);
-            padding: 1rem;
-            border-radius: 1rem;
             font-size: 12px;
-            line-height: 1.3;
             width: 150px;
             height: 150px;
+            border-radius: 1rem;
+            color: colors(white);
+            background-color: colors(lightBlue);
+            line-height: 1.3;
+            padding: 1rem;
             z-index: 1;
         }
     }
     .hero-bg{
         background: url("../images/mainview_img.jpg") -220px 0px /  cover  no-repeat;
+        width: 90%;
+        height: 500px;
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 90%;
-        height: 50%;
     }
 }
 
@@ -193,7 +193,7 @@ strong{
         flex-wrap: wrap;
         max-width: 400px;
         margin: 0 auto;
-        gap: 4rem 4%;
+        gap: 4rem 40px;
         li{
             width: 48%;
             img{
@@ -542,11 +542,22 @@ strong{
 
 @include mq('tb'){
     .hero{
+        position: relative;
         .hero-container{
-            background: url("../images/mainview_img.jpg") 0px 0px /  cover  no-repeat;
             width: 100%;
             height: 50vh;
+            //
+            // margin-left: auto;
         }
+        .hero-bg{
+            background: url("../images/mainview_img.jpg") 0px 0px /  cover  no-repeat;
+            width: 80%;
+            height: 70vh;
+            position: absolute;
+            top: 4rem;
+            z-index: -1;
+        }
+
         .hero__txt_small{
             width: 600px;
             margin: 0 auto;
@@ -563,9 +574,7 @@ strong{
             font-weight: bold;
         }
        }
-       .hero-bg{
-        display: none;
-       }
+
     }
     .section-reason{
         .section__title{
@@ -577,7 +586,8 @@ strong{
             max-width: 100vw;
             li{
                 margin: 0 auto;
-                width: 150px;
+                width: Calc(25% - 40px * 3 / 4);
+
             }
         }
     }
@@ -674,7 +684,7 @@ strong{
 
 @include mq('dt'){
     .l-wrapper{
-        padding: 0 15rem ;
+        padding: 0 20rem ;
     }
     .header{
         display: flex;
@@ -711,30 +721,39 @@ strong{
         }
     }
     .hero{
-        padding: 4rem 0;
+       margin-top: 4rem;
         position: relative;
         .hero-container{
             .hero__txt_small{
-                width: 1000px;
-                margin: 0 auto;
+                width: 100%;
                 padding: .5rem;
                 span{
-                   display: inline;
-                 }
-           }
-            .hero__txt_big{
-                width: 558px;
-                span:nth-child(2){
-                    font-size: 3.5rem;
+                    display: inline;
                 }
             }
-            .hero__list{
-            justify-content: start;
-           }
-        }
-        .hero-bg{
+            .hero-container__txt{
+                margin: 0 auto;
+                width: 60%;
+                .hero__txt_big{
+                    display: inline-block;
+                    text-align: center;
+                    span{
+                        display: block;
+                    }
+                    span:nth-child(2){
+                        font-size: 3.5rem;
+                    }
+                }
+                .hero__txt_big-left{
+                    text-align: left;
 
+                }
+                .hero__list{
+                justify-content: start;
+               }
+            }
         }
+
     }
     .section-reason{
         .reason__container{
