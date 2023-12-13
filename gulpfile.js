@@ -16,7 +16,7 @@ const sassBuild = () =>{
 }
 
 const srcPath = {
-    html: 'src/index.html',
+    html: 'index.html',
     css: 'src/sass/*.scss'
 }
 
