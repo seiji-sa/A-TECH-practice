@@ -1,3 +1,4 @@
 {
-    "editor.minimap.autohide": true
+    "editor.minimap.autohide": true,
+    "liveServer.settings.port": 5501
 }

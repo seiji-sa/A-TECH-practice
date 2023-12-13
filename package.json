@@ -18,15 +18,17 @@
     "@storybook/html": "^7.5.2",
     "@storybook/html-vite": "^7.5.2",
     "@storybook/testing-library": "^0.2.2",
+    "autoprefixer": "^10.4.16",
+    "css-declaration-sorter": "^7.1.1",
     "gulp": "^4.0.2",
     "gulp-livereload": "^4.0.2",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
     "gulp-watch": "^5.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sass": "^1.69.5",
     "storybook": "^7.5.2"
-  },
-  "dependencies": {
-    "gulp-sass": "^5.1.0",
-    "sass": "^1.69.5"
   }
 }
