@@ -10,7 +10,8 @@ const mmq = require("gulp-merge-media-queries");
 const sassBuild = () =>{
     return src('src/sass/*.scss')
     .pipe(sass({outputStyle: 'expanded'}))
-    .pipe(dest('dist/css'))
+    // .pipe(dest('dist/css'))
+    .pipe(dest(distPath))
     .pipe(postcss([autoprefixer(),cssSorter({order:'smacss'})]))
     .pipe(mmq())
 }
