@@ -106,23 +106,80 @@
   }
   .hero .hero-container .hero-container .hero-container__txt .hero__list {
     justify-content: start;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  .hero .hero-container .hero-container .hero-container__txt .hero__list li {
-    font-size: 12px;
-    width: 150px;
-    height: 150px;
-    border-radius: 1rem;
-    line-height: 1.3;
-    padding: 1rem;
-    z-index: 1;
   }
 }
-@media screen and (min-width: 1024px) and (min-width: 768px) {
+.hero .hero-container .hero-container .hero-container__txt .hero__txt_small {
+  font-size: 0.9rem;
+  border-radius: 1rem;
+  padding: 0.1rem 3rem;
+  margin-bottom: 1rem;
+}
+.hero .hero-container .hero-container .hero-container__txt .hero__txt_small span {
+  display: inline-block;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .hero .hero-container .hero-container .hero-container__txt .hero__txt_small {
+    width: 600px;
+    margin: 0 auto;
+  }
+  .hero .hero-container .hero-container .hero-container__txt .hero__txt_small span {
+    width: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero .hero-container .hero-container .hero-container__txt .hero__txt_small {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .hero .hero-container .hero-container .hero-container__txt .hero__txt_small span {
+    display: inline;
+  }
+}
+.hero .hero-container .hero-container .hero-container__txt .hero__txt_big span {
+  width: 100%;
+  display: inline-block;
+}
+.hero .hero-container .hero-container .hero-container__txt .hero__txt_big span:nth-child(1) {
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+.hero .hero-container .hero-container .hero-container__txt .hero__txt_big span:nth-child(2) {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.hero .hero-container .hero-container .hero-container__txt .hero__txt_big span:nth-child(3) {
+  font-weight: 100;
+}
+@media screen and (min-width: 1024px) {
+  .hero .hero-container .hero-container .hero-container__txt .hero__txt_big {
+    display: inline-block;
+    text-align: center;
+  }
+  .hero .hero-container .hero-container .hero-container__txt .hero__txt_big span {
+    display: block;
+  }
+  .hero .hero-container .hero-container .hero-container__txt .hero__txt_big span:nth-child(2) {
+    font-size: 3.5rem;
+  }
+}
+.hero .hero-container .hero-container .hero-container__txt .hero__list {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.hero .hero-container .hero-container .hero-container__txt .hero__list li {
+  font-size: 12px;
+  width: 150px;
+  height: 150px;
+  border-radius: 1rem;
+  line-height: 1.3;
+  padding: 1rem;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
   .hero .hero-container .hero-container .hero-container__txt .hero__list li {
     width: 150px;
     height: 150px;
@@ -131,63 +188,7 @@
     font-weight: bold;
   }
 }
-.hero .hero-container .hero-container .hero__txt_small {
-  font-size: 0.9rem;
-  border-radius: 1rem;
-  padding: 0.1rem 3rem;
-  margin-bottom: 1rem;
-}
-.hero .hero-container .hero-container .hero__txt_small span {
-  display: inline-block;
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .hero .hero-container .hero-container .hero__txt_small {
-    width: 600px;
-    margin: 0 auto;
-  }
-  .hero .hero-container .hero-container .hero__txt_small span {
-    width: auto;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .hero .hero-container .hero-container .hero__txt_small {
-    width: 100%;
-    padding: 0.5rem;
-  }
-  .hero .hero-container .hero-container .hero__txt_small span {
-    display: inline;
-  }
-}
-.hero .hero-container .hero-container .hero__txt_big span {
-  width: 100%;
-  display: inline-block;
-}
-.hero .hero-container .hero-container .hero__txt_big span:nth-child(1) {
-  font-weight: 100;
-  font-size: 1.2rem;
-}
-.hero .hero-container .hero-container .hero__txt_big span:nth-child(2) {
-  font-weight: bold;
-  font-size: 2rem;
-}
-.hero .hero-container .hero-container .hero__txt_big span:nth-child(3) {
-  font-weight: 100;
-}
-@media screen and (min-width: 1024px) {
-  .hero .hero-container .hero-container .hero__txt_big {
-    display: inline-block;
-    text-align: center;
-  }
-  .hero .hero-container .hero-container .hero__txt_big span {
-    display: block;
-  }
-  .hero .hero-container .hero-container .hero__txt_big span:nth-child(2) {
-    font-size: 3.5rem;
-  }
-}
-
-.hero-bg {
+.hero .hero-bg {
   background: url("../../images/mainview_img.jpg") -220px 0px/cover no-repeat;
   width: 90%;
   height: 500px;
@@ -196,7 +197,7 @@
   right: 0;
 }
 @media screen and (min-width: 768px) {
-  .hero-bg {
+  .hero .hero-bg {
     background: url("../../images/mainview_img.jpg") 0px 0px/cover no-repeat;
     width: 80%;
     height: 70vh;

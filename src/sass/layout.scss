@@ -1,3 +1,16 @@
+$colors:(
+    lightBlue: #39B6FF,
+    lightBlue2:#a1e3ff,
+    black: #333333,
+    white: #fff,
+    paul: #00c7ed,
+    darkBlue: #224377,
+    base: #F2F9FD
+);
+@function colors($key) {
+    @return map-get($colors, $key);
+};
+
 $breakpoint: (
     dt:'screen and (min-width: 1024px)',
     tb:'screen and (min-width: 768px)',
@@ -10,6 +23,29 @@ $breakpoint: (
         @content;
     }
 
+}
+
+// ボタン
+@mixin btn(){
+    max-width: 300px;
+    border-radius: 2rem;
+    padding: .8rem .3rem;
+    margin: 15px auto 0;
+    text-align: center;
+}
+
+@mixin dl(){
+    dl {
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+      }
+      dl dt {
+        width: 30%;
+      }
+      dl dd {
+        width: 50%;
+      }
 }
 
 /*common-layout
@@ -25,7 +61,7 @@ $breakpoint: (
     margin-bottom: 1.7rem;
 }
 .l-wrapper{
-    padding: 2.3rem .9rem;
+    padding:3rem .9rem;
     @include mq('dt'){
         padding: 0 20rem ;
     }
@@ -113,7 +149,29 @@ $breakpoint: (
 
                     }
                     .hero__list{
-                    justify-content: start;
+                        justify-content: start;
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        gap: 1rem;
+                        margin-top: 2rem;
+                        li{
+                            font-size: 12px;
+                            width: 150px;
+                            height: 150px;
+                            border-radius: 1rem;
+                            line-height: 1.3;
+                            padding: 1rem;
+                            z-index: 1;
+                            @include mq('tb'){
+                                width: 150px;
+                                height: 150px;
+                                font-size: 15px;
+                                padding: 40px 0 30px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
                    }
                 }
             // margin-top: 5rem headerも適応されて下に配置されるのはなぜ;
@@ -168,29 +226,6 @@ $breakpoint: (
                         }
                     }
                 }
-                .hero__list{
-                    display: flex;
-                    justify-content: center;
-                    text-align: center;
-                    gap: 1rem;
-                    margin-top: 2rem;
-                    li{
-                        font-size: 12px;
-                        width: 150px;
-                        height: 150px;
-                        border-radius: 1rem;
-                        line-height: 1.3;
-                        padding: 1rem;
-                        z-index: 1;
-                        @include mq('tb'){
-                            width: 150px;
-                            height: 150px;
-                            font-size: 15px;
-                            padding: 40px 0 30px;
-                            font-weight: bold;
-                        }
-                    }
-                }
             }
         }
     }
@@ -211,7 +246,6 @@ $breakpoint: (
             z-index: -1;
         }
     }
-}
 /*================================================*/
 
 
