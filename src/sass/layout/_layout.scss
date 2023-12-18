@@ -1,0 +1,36 @@
+@use "../globals" as *;
+@use "../parts" as *;
+/*common-layout
+==================================================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    color: $black;
+}
+
+.section__title{
+    text-align: center;
+    margin-bottom: 1.7rem;
+}
+.l-wrapper{
+    padding:3rem 1rem 0;
+    @include  mq(dt){
+        padding: 0 10rem ;
+    }
+}
+
+.m-wrapper{
+    max-width: 400px;
+    margin: 0 auto;
+    @include mq(tb){
+        max-width: 1000px;
+    }
+}
+
+
+
+/*================================================*/

@@ -1,0 +1,23 @@
+/*common-layout
+==================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section__title {
+  text-align: center;
+  margin-bottom: 1.7rem;
+}
+
+.l-wrapper {
+  padding: 3rem 0.9rem;
+}
+@media screen and (min-width: 1024px) {
+  .l-wrapper {
+    padding: 0 20rem;
+  }
+}
+
+/*================================================*/

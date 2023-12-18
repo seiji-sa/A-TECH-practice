@@ -1,0 +1,22 @@
+// ボタン
+.btn{
+    max-width: 300px;
+    border-radius: 2rem;
+    padding: .8rem .3rem;
+    margin: 15px auto 0;
+    text-align: center;
+}
+
+
+    dl {
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+      }
+      dl dt {
+        width: 30%;
+      }
+      dl dd {
+        width: 50%;
+      }
+

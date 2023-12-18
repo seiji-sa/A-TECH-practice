@@ -1,0 +1,39 @@
+@use "../globals" as *;
+@use "../parts" as *;
+/*contact
+==================================================*/
+.section-contact{
+    background-color: colors(base);
+
+    p{
+        text-align: center;
+    }
+    form{
+        label{
+            color: colors(darkBlue);
+            font-weight: bold;
+        }
+        input,textarea{
+            background-color: colors(white);
+            width: 100%;
+            border-radius: 1rem;
+            border:0px solid #000;
+            margin-bottom: 15px;
+        }
+        .form__name{
+            margin-bottom: 15px;
+        }
+        p{
+            background-color: colors(lightBlue);
+        }
+       .section__btn{
+
+            background-color: colors(lightBlue);
+            a{
+                color: colors(white);
+            }
+        }
+    }
+}
+
+/*================================================*/

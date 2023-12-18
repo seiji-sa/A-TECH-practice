@@ -6,22 +6,23 @@ const cssSorter = require("css-declaration-sorter");
 const mmq = require("gulp-merge-media-queries");
 
 
+const srcPath = {
+    html: 'src/index.html',
+    css: 'src/sass/**/*.scss'
+}
+
+const distPath = {
+    css: 'dist/css/'
+}
+
 const sassBuild = () =>{
-    return src('src/sass/*.scss')
+    return src('src/sass/**/*.scss')
     .pipe(sass({outputStyle: 'expanded'}))
-    .pipe(dest('dist/css'))
+    .pipe(dest(distPath.css))
     .pipe(postcss([autoprefixer(),cssSorter({order:'smacss'})]))
     .pipe(mmq())
 }
 
-const srcPath = {
-    html: 'src/index.html',
-    css: 'src/sass/*.scss'
-}
-
-const distPath = {
-    css: 'dist/css/style.css'
-}
 
 const watchFile = () =>{
     watch(srcPath.css, sassBuild)

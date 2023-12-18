@@ -1,0 +1,164 @@
+@use "../globals" as *;
+@use "../parts" as *;
+
+*{
+    outline: 1px solid red;
+}
+/*hero
+==================================================*/
+.hero-container{
+    margin-top: 4rem;
+    text-align: center;
+    @include mq('tb'){
+        width: 100%;
+        height: 50vh;
+        // margin-left: auto;
+    }
+    @include mq('dt'){
+        margin-top: 4rem;
+        position: relative;
+    }
+    .hero-container__txt{
+        // margin-top: 5rem headerも適応されて下に配置されるのはなぜ;
+        .hero__txt_small{
+            font-size: 1rem;
+            border-radius: 1rem;
+            padding: 1rem 3rem;
+            margin-bottom: 1rem;
+            background-color: $lightBlue2;
+            color: $white;
+            span{
+                display: inline-block;
+                width: 100%;
+                margin-bottom: 15px;
+                &:nth-last-child(1){
+                    margin-bottom: 0;
+                }
+            }
+            @include mq('tb'){
+                width: 600px;
+                margin: 0 auto;
+                span{
+                    width: auto;
+                }
+            }
+            @include mq('dt'){
+                width: 100%;
+                padding: .5rem;
+                span{
+                    display: inline;
+                }
+            }
+        }
+        .hero__txt_big{
+            .block{
+                display: block;
+                // 実践的なのマージンの開け方スマホ
+            }
+            span{
+                color: $darkBlue;
+                width: 100%;
+                display: inline-block;
+                margin-bottom: 20px;
+                &:nth-child(1){
+                    font-weight: 100;
+                    font-size: 1.5rem;
+                }
+                &:nth-child(2){
+                    font-weight: bold;
+                    font-size: 2.4rem;
+                    // 文字の折り返しについて
+                }
+                &:nth-child(3){
+                    font-weight: 100;
+                    font-size: 2rem;
+                }
+            }
+
+            @include mq('dt'){
+                display: inline-block;
+                text-align: center;
+                span{
+                    display: block;
+                }
+                span:nth-child(2){
+                    font-size: 3.5rem;
+                }
+            }
+        }
+        .hero__list{
+            justify-content: start;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            li{
+                background-color: $lightBlue;
+                color: $white;
+                font-size: 12px;
+                width: 120px;
+                height: 100px;
+                border-radius: 1rem;
+                line-height: 1.3;
+                padding: 1rem;
+                z-index: 1;
+                @include mq('tb'){
+                    width: 150px;
+                    height: 150px;
+                    font-size: 15px;
+                    padding: 40px 0 30px;
+                    font-weight: bold;
+                }
+            }
+        }
+        @include mq('dt'){
+            margin: 0 auto;
+            width: 60%;
+            .hero__txt_big-left{
+                text-align: left;
+
+            }
+        }
+    }
+    }
+
+
+
+    //    background: url("../../images/mainview_img.jpg") -220px 0px /  cover  no-repeat;
+    //    width: 90%;
+    //    height: 500px;
+    //    position: absolute;
+    //    bottom: 0;
+    //    right: 0;
+    //    z-index: -1;
+    //    @include mq('tb'){
+    //        background: url("../../images/mainview_img.jpg") 0px 0px /  cover  no-repeat;
+    //        width: 80%;
+    //        height: 70vh;
+    //        position: absolute;
+    //        top: 4rem;
+    //        z-index: -1;
+    //    }
+
+
+    // .hero-bg{
+    //  position: relative;
+    //  width: 90%;
+    //  top: auto;
+    //  right: auto;
+    //  margin: 0 0 0 auto;
+    //  @include mq(dt){
+    //     position: relative;
+    //     top: 0;
+    //     right: 0;
+    //  }
+    //  img {
+    //      width: 100%;
+    //      position: absolute;
+    //      top: 0;
+    //      left: 0;
+    //  }
+    // }
+/*================================================*/
+

@@ -1,0 +1,45 @@
+@use "../globals" as *;
+@use "../parts" as *;
+/*footer
+==================================================*/
+.footer{
+    text-align: center;
+    padding: 1rem;
+    .footer__container{
+        display: grid;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        @include mq('tb'){
+            display: flex;
+            justify-content: space-around;
+            .footer__container_right{
+                display: flex;
+            }
+        }
+        .A-TECH-logo{
+            width: 250px;
+            margin: 0 auto;
+
+            padding: 1rem;
+            border-radius: 1rem;
+            img{
+                margin: 0 auto;
+            }
+        }
+        p{
+            a{
+
+            }
+        }
+        .S-GATE-logo{
+
+            width: 100px;
+            padding: .5rem 1rem;
+            border-radius: 1rem;
+            margin: 0 auto;
+        }
+    }
+
+}
+
+/*================================================*/
