@@ -4,7 +4,12 @@
 /*price
 ==================================================*/
 .section-price{
+    background: $lightBlue;
+    .section__title{
+        color: $white;
+    }
     .price__course{
+        background: $white;
         padding: .3rem;
         border-radius: 1rem;
         margin-bottom: 2rem;
@@ -13,6 +18,8 @@
             margin: 0 auto 60px;
         }
         .price__course_title{
+            background: $lightBlue;
+            color: $white;
             text-align: center;
             border-radius: 1rem 1rem 0 0;
             font-weight: bold;
@@ -26,13 +33,15 @@
         }
         span{
             font-size: .9rem;
-            background-color: colors(paul);
+            background-color: $paul;
+            color: $white;
             padding: .5rem;
             border-radius: .5rem;
             margin-right: 1rem;
         }
     }
     .price__img{
+        text-align: center;
         img{
             max-width: 760px;
         }

@@ -18,9 +18,6 @@ html{
 }
 .l-wrapper{
     padding:3rem 1rem 0;
-    @include  mq(dt){
-        padding: 0 10rem ;
-    }
 }
 
 .m-wrapper{

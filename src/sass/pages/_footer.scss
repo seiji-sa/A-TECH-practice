@@ -3,15 +3,16 @@
 /*footer
 ==================================================*/
 .footer{
+    background-color: $darkBlue;
+    color: $white;
     text-align: center;
-    padding: 1rem;
     .footer__container{
-        display: grid;
-        gap: 1rem;
-        margin-bottom: 3rem;
-        @include mq('tb'){
+        margin-bottom: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        @include mq(tb){
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             .footer__container_right{
                 display: flex;
             }
@@ -19,26 +20,22 @@
         .A-TECH-logo{
             width: 250px;
             margin: 0 auto;
-
+            background: $white;
             padding: 1rem;
             border-radius: 1rem;
-            img{
-                margin: 0 auto;
-            }
-        }
-        p{
-            a{
-
+            @include mq(tb){
+                margin: 0;
             }
         }
         .S-GATE-logo{
-
-            width: 100px;
+            background: $white;
+            width: 150px;
             padding: .5rem 1rem;
             border-radius: 1rem;
             margin: 0 auto;
         }
     }
+
 
 }
 

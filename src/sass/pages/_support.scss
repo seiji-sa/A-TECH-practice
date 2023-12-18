@@ -3,38 +3,52 @@
 /*support
 ==================================================*/
 .section-support{
+    background: $lightBlue2;
     @include mq('tb'){
         .section__title br{
             display: none;
         }
     }
     .support__list{
+        max-width: 900px;
         display: grid;
-        grid-temqlate-columns:  repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns:  repeat(auto-fit, minmax(250px, 1fr));
         margin-bottom: 3rem;
+        margin: 0 auto;
         .support__item{
+            text-align: center;
             img{
+                width: 200px;
                 padding: .5rem;
                 border-radius: 50%;
-                border: 2px solid colors(lightBlue);
+                border: 2px solid $lightBlue;
                 margin: 1.5rem auto;
+            }
+            h3, p{
+                text-align: left;
             }
         }
     }
+
     .support-comment{
+        background: $white;
         padding: 2rem 1rem;
         border-radius: 1rem;
         text-align: center;
         .support-comment__txt_top{
             margin-bottom: 2rem;
+            color: $lightBlue;
         }
         .support-comment__list{
+            color: $white;
             @include mq('tb'){
                 display: flex;
                 gap: 30px;
                 width: 100%;
                 .support-comment__item{
-                    width: calc(50% - 30px);
+                    // width: calc(50% - 30px);
+                     width: 50%;
+                    background-color: $lightBlue;
                 }
             }
             li{

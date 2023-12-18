@@ -1,4 +1,4 @@
-.btn {
+.btn, .section-provide .provide__card .provide__card_right .more-wrapper_btn, .section-contact form .section__btn {
   max-width: 300px;
   border-radius: 2rem;
   padding: 0.8rem 0.3rem;
@@ -227,28 +227,33 @@ dl dd {
 /*lean
 ==================================================*/
 @media screen and (min-width: 768px) {
-  .section-learn .learn__skill-container {
+  .learn__skill-container {
     display: flex;
     gap: 30px;
   }
 }
-.section-learn .learn-skill__title {
+
+.learn-skill__title {
   text-align: center;
   font-size: 1.7rem;
   margin-bottom: 0.82rem;
+  color: #224377;
 }
-.section-learn .learn__card_left, .section-learn .learn__card_right, .section-learn .learn-step {
+
+.learn__card_left, .learn__card_right, .learn-step {
   margin-bottom: 3rem;
 }
+
 @media screen and (min-width: 768px) {
-  .section-learn .learn__card_left, .section-learn .learn__card_right {
+  .learn__card_left, .learn__card_right {
     width: calc(50% - 30px);
   }
 }
-.section-learn .learn__card_cautionary {
+.learn__card_cautionary {
   margin-top: 1.3rem;
 }
-.section-learn .learn-list {
+
+.learn-list {
   text-align: center;
   width: 100%;
   font-size: 0.8rem;
@@ -256,43 +261,57 @@ dl dd {
   padding: 1rem;
   border-radius: 1rem;
   line-height: 2.5rem;
+  background: #39B6FF;
 }
-.section-learn .learn-list .learn__skill {
+.learn-list .learn__skill {
   display: inline-block;
   padding: 0 0.3rem;
   border-radius: 0.8rem;
   margin: 0 0.1rem;
+  background-color: #fff;
+  color: #39B6FF;
 }
-.section-learn .learn-step {
-  border: 4px solid colors(lightBlue);
+
+.learn-step {
+  max-width: 700px;
+  margin: 0 auto;
+  border: 4px solid #39B6FF;
   border-radius: 1rem;
 }
-.section-learn .learn-step .learn-step__title {
+.learn-step .learn-step__title {
   text-align: center;
   font-size: 1.3rem;
   padding: 0.5rem;
+  background-color: #a1e3ff;
 }
-.section-learn .learn-step .learn-step__content {
+.learn-step .learn-step__content {
+  width: 500px;
+  margin: 0 auto;
+  display: block;
   padding: 1rem 2rem;
+  text-align: left;
 }
 @media screen and (min-width: 768px) {
-  .section-learn .learn-step .learn-step__content {
+  .learn-step .learn-step__content {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     text-align: center;
   }
-  .section-learn .learn-step .learn-step__content dd {
-    width: 80%;
+  .learn-step .learn-step__content .learn-step__content_txt {
+    width: auto;
     text-align: left;
   }
 }
-.section-learn .learn-step .learn-step__content .learn-step__content_month {
+.learn-step .learn-step__content .learn-step__content_month {
   display: inline-block;
+  width: 150px;
   padding: 0.2rem 2rem;
   border-radius: 1rem;
+  background-color: #a1e3ff;
+  color: #39B6FF;
 }
-.section-learn .learn-step .learn-step__content .learn-step__content_txt {
+.learn-step .learn-step__content .learn-step__content_txt {
   padding: 0.5rem 0 0.6rem;
 }
 
@@ -311,17 +330,25 @@ dl dd {
 /*contact
 ==================================================*/
 .section-contact {
-  background-color: colors(base);
+  background-color: #F2F9FD;
+}
+.section-contact .contact__list {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .section-contact .contact__list {
+    display: flex;
+  }
 }
 .section-contact p {
   text-align: center;
 }
 .section-contact form label {
-  color: colors(darkBlue);
+  color: #224377;
   font-weight: bold;
 }
 .section-contact form input, .section-contact form textarea {
-  background-color: colors(white);
+  background-color: #fff;
   width: 100%;
   border-radius: 1rem;
   border: 0px solid #000;
@@ -331,19 +358,26 @@ dl dd {
   margin-bottom: 15px;
 }
 .section-contact form p {
-  background-color: colors(lightBlue);
+  background-color: #39B6FF;
 }
 .section-contact form .section__btn {
-  background-color: colors(lightBlue);
+  background-color: #39B6FF;
 }
 .section-contact form .section__btn a {
-  color: colors(white);
+  color: #fff;
 }
 
 /*================================================*/
 /*price
 ==================================================*/
+.section-price {
+  background: #39B6FF;
+}
+.section-price .section__title {
+  color: #fff;
+}
 .section-price .price__course {
+  background: #fff;
   padding: 0.3rem;
   border-radius: 1rem;
   margin-bottom: 2rem;
@@ -355,6 +389,8 @@ dl dd {
   }
 }
 .section-price .price__course .price__course_title {
+  background: #39B6FF;
+  color: #fff;
   text-align: center;
   border-radius: 1rem 1rem 0 0;
   font-weight: bold;
@@ -368,12 +404,14 @@ dl dd {
 }
 .section-price .price__course span {
   font-size: 0.9rem;
-  background-color: colors(paul);
+  background-color: #00c7ed;
+  color: #fff;
   padding: 0.5rem;
   border-radius: 0.5rem;
   margin-right: 1rem;
 }
 .section-price .price__img {
+  text-align: center;
   overflow-x: scroll;
 }
 .section-price .price__img img {
@@ -383,6 +421,10 @@ dl dd {
 /*================================================*/
 /*provide
 ==================================================*/
+.section-provide {
+  background: #39B6FF;
+  color: #fff;
+}
 .section-provide .provide__card {
   display: grid;
   gap: 15px;
@@ -397,12 +439,14 @@ dl dd {
   }
 }
 .section-provide .provide__card .provide__more-container {
+  color: #224377;
   display: flex;
   width: calc(100% - 5px);
   gap: 5px;
   margin-bottom: 15px;
 }
 .section-provide .provide__card .provide__more-container .more-wrapper_icon {
+  background-color: #fff;
   border-radius: 1rem 0 0 1rem;
   width: 40%;
   display: flex;
@@ -415,14 +459,20 @@ dl dd {
 .section-provide .provide__card .provide__more-container .more-wrapper_lists {
   text-align: center;
   width: 60%;
+  background-color: #fff;
   border-radius: 0 1rem 1rem 0;
 }
 .section-provide .provide__card .provide__card_right .more-wrapper_img {
   border-radius: 2rem;
   max-width: 350px;
-  box-shadow: 10px 10px 0 colors(lightBlue2);
+  box-shadow: 10px 10px 0 #a1e3ff;
   margin: 0 auto;
 }
+.section-provide .provide__card .provide__card_right .more-wrapper_btn {
+  color: #224377;
+  background-color: #fff;
+}
+
 /*================================================*/
 /*reason
 ==================================================*/
@@ -525,29 +575,46 @@ dl dd {
 /*================================================*/
 /*support
 ==================================================*/
+.section-support {
+  background: #a1e3ff;
+}
 @media screen and (min-width: 768px) {
   .section-support .section__title br {
     display: none;
   }
 }
 .section-support .support__list {
+  max-width: 900px;
   display: grid;
-  grid-temqlate-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin-bottom: 3rem;
+  margin: 0 auto;
+}
+.section-support .support__list .support__item {
+  text-align: center;
 }
 .section-support .support__list .support__item img {
+  width: 200px;
   padding: 0.5rem;
   border-radius: 50%;
-  border: 2px solid colors(lightBlue);
+  border: 2px solid #39B6FF;
   margin: 1.5rem auto;
 }
+.section-support .support__list .support__item h3, .section-support .support__list .support__item p {
+  text-align: left;
+}
 .section-support .support-comment {
+  background: #fff;
   padding: 2rem 1rem;
   border-radius: 1rem;
   text-align: center;
 }
 .section-support .support-comment .support-comment__txt_top {
   margin-bottom: 2rem;
+  color: #39B6FF;
+}
+.section-support .support-comment .support-comment__list {
+  color: #fff;
 }
 @media screen and (min-width: 768px) {
   .section-support .support-comment .support-comment__list {
@@ -556,7 +623,8 @@ dl dd {
     width: 100%;
   }
   .section-support .support-comment .support-comment__list .support-comment__item {
-    width: calc(50% - 30px);
+    width: 50%;
+    background-color: #39B6FF;
   }
 }
 .section-support .support-comment .support-comment__list li {
@@ -572,21 +640,48 @@ dl dd {
 }
 
 /*================================================*/
+/*voice
+==================================================*/
+@media screen and (min-width: 768px) {
+  .voice__list {
+    display: flex;
+  }
+}
+.voice__list .voice__item {
+  border-radius: 1rem;
+  border: 4px solid #39B6FF;
+  max-width: 250px;
+  margin: 0 auto 4rem;
+  padding: 1rem;
+  text-align: center;
+}
+.voice__list .voice__item img {
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  border: 3px solid lightBlue;
+}
+.voice__list .voice__item .voice__item_name {
+  margin-bottom: 15px;
+  border-radius: 1rem;
+}
+
+/*================================================*/
 /*footer
 ==================================================*/
 .footer {
+  background-color: #224377;
+  color: #fff;
   text-align: center;
-  padding: 1rem;
 }
 .footer .footer__container {
-  display: grid;
-  gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .footer .footer__container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .footer .footer__container .footer__container_right {
     display: flex;
@@ -595,14 +690,18 @@ dl dd {
 .footer .footer__container .A-TECH-logo {
   width: 250px;
   margin: 0 auto;
+  background: #fff;
   padding: 1rem;
   border-radius: 1rem;
 }
-.footer .footer__container .A-TECH-logo img {
-  margin: 0 auto;
+@media screen and (min-width: 768px) {
+  .footer .footer__container .A-TECH-logo {
+    margin: 0;
+  }
 }
 .footer .footer__container .S-GATE-logo {
-  width: 100px;
+  background: #fff;
+  width: 150px;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   margin: 0 auto;
@@ -1001,11 +1100,6 @@ html {
 
 .l-wrapper {
   padding: 3rem 1rem 0;
-}
-@media screen and (min-width: 1024px) {
-  .l-wrapper {
-    padding: 0 10rem;
-  }
 }
 
 .m-wrapper {

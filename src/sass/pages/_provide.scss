@@ -3,7 +3,8 @@
 /*provide
 ==================================================*/
 .section-provide{
-
+    background: $lightBlue;
+    color: $white;
     .provide__card{
         // ギャプを使うためにグリッドにした
         display: grid;
@@ -16,12 +17,13 @@
             }
         }
         .provide__more-container{
+            color: $darkBlue;
             display: flex;
             width: calc(100% - 5px);
             gap: 5px;
             margin-bottom: 15px;
             .more-wrapper_icon{
-
+                background-color: $white;
                 border-radius: 1rem 0 0 1rem;
                 width: 40%;
                 display: flex;
@@ -35,7 +37,7 @@
             .more-wrapper_lists{
                 text-align: center;
                 width: 60%;
-
+                background-color: $white;
                 border-radius: 0 1rem 1rem 0;
             }
         }
@@ -44,11 +46,13 @@
             .more-wrapper_img{
                 border-radius: 2rem;
                 max-width: 350px;
-                box-shadow: 10px 10px 0 colors(lightBlue2);
+                box-shadow: 10px 10px 0 $lightBlue2;
                 margin: 0 auto;
             }
             .more-wrapper_btn{
-
+                @extend .btn;
+                color: $darkBlue;
+                background-color: $white;
 
 
             }
