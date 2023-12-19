@@ -3,7 +3,7 @@
 /*support
 ==================================================*/
 .section-support{
-    background: $lightBlue2;
+    background-color: rgba($lightBlue2, .1);
     @include mq('tb'){
         .section__title br{
             display: none;

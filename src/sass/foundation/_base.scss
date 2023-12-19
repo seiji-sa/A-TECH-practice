@@ -1,17 +1,31 @@
-// html{
-//     font-size: 62.5%;
+html{
+    font-size: 15px;
+}
+// font-face {
+// 	font-family: 'Gen Jyuu Gothic', sans-serif;
+//     font-style: bold;
+//     font-weight: 700;
+// 	src: url(../fonts/GenJyuuGothicL-Bold.ttf);
+// }
+// @font-face {
+//     font-family: 'Gen Jyuu Gothic', sans-serif;
+//     font-style: normal;
+//     font-weight: 400;
+// 	src: url(../fonts/GenJyuuGothicL-Normal.ttf);
 // }
 
 // body{
-//     color: global.$text-color;
+//     // color: global.$text-color;
 //     font-size: 1.6rem;
-//     font-family: global.$f-t;
+//     // font-family: global.$f-t;
+//     font-family: "Gen Jyuu Gothic",sans-serif;
 //     position: relative;
 //     font-weight: 500;
 // }
 
-// img{
-//     width: 100%;
-//     vertical-align: bottom;
-// }
+img{
+    max-width: 100%;
+    height: auto;
+    border: none;
+}
 

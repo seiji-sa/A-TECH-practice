@@ -44,18 +44,20 @@
            }
      }
     .learn-step{
-        max-width: 700px;
+        max-width: 650px;
         margin: 0 auto;
         border: 4px solid $lightBlue;
-        border-radius: 1rem;
+        border-radius: 2rem;
         .learn-step__title{
             text-align: center;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
+            font-weight: bold;
             padding: .5rem;
-            background-color: $lightBlue2;
+            color: $darkBlue;
+            background-color: rgba($lightBlue2, .1)
         }
         .learn-step__content{
-            width: 500px;
+            max-width: 500px;
             margin: 0 auto;
             display: block;
             padding: 1rem 2rem;
@@ -65,23 +67,25 @@
                 flex-wrap: wrap;
                 gap: 10px;
                 text-align: center;
-                .learn-step__content_txt{
-                    width: auto;
-
-                    text-align: left;
-                    // コンテナを真ん中にする方法
-                }
+                max-width: 380px;
             }
             .learn-step__content_month{
                 display: inline-block;
                 width: 150px;
                 padding: .2rem 2rem;
-                border-radius: 1rem;
-                background-color: $lightBlue2;
+                border-radius: 1.5rem;
+                background-color: rgba($lightBlue2, .1);
                 color: $lightBlue;
+                @include mq(tb){
+                    width: 125px;
+                    padding: .5rem;
+                    line-height: 1;
+                }
             }
             .learn-step__content_txt{
+                max-width: 380px;
                 padding: .5rem 0 .6rem;
+                @include mq(tb){}
             }
         }
     }

@@ -15,14 +15,19 @@ html{
 .section__title{
     text-align: center;
     margin-bottom: 1.7rem;
+    font-weight: normal;
+    strong{
+        font-size: 2rem;
+    }
 }
 .l-wrapper{
-    padding:3rem 1rem 0;
+    padding:0 1rem;
 }
 
 .m-wrapper{
-    max-width: 400px;
+    max-width: 940px;
     margin: 0 auto;
+    padding: 4em 1em;
     @include mq(tb){
         max-width: 1000px;
     }

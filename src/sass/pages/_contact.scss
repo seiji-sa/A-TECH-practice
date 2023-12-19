@@ -3,7 +3,7 @@
 /*contact
 ==================================================*/
 .section-contact{
-    background-color: $base;
+    background-color: rgba($lightBlue2, .1);
 .contact__list{
     display: block;
     @include mq(tb){

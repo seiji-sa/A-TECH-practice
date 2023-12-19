@@ -9,6 +9,7 @@
     justify-content: space-between;
     position: fixed;
     top: 0;
+    background-color: rgba($white, .9);
     z-index: 2;
     @include mq('dt'){
         display: flex;
@@ -45,7 +46,7 @@
         }
     }
     .hamburger-menu{
-        width: 90px;
+        width: 100px;
         height: 65px;
         border-radius: 0 0 0 1rem;
         background-color: $lightBlue;

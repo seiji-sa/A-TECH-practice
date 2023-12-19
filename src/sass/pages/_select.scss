@@ -3,7 +3,7 @@
 /*select
 ==================================================*/
 .section-select{
-    background-color: $lightBlue2;
+    background-color: rgba($lightBlue2, .1);
     counter-reset: number 0;
     @include mq('dt'){
         margin: 0 auto;
@@ -27,6 +27,7 @@
                 position: absolute;
                 counter-increment: number 1;
                 content: counter(number);
+                color: $lightBlue;
                 left: 0%;
                 bottom: -15px;
                 font-size: 4rem;
@@ -40,7 +41,7 @@
             border-radius: 2rem;
             width: calc(100% - 30px);
             margin: 2rem 10px 3rem;
-            // box-shadow: 10px 10px rgba(colors(lightBlue), .8);
+            box-shadow: 10px 10px $lightBlue;
             @include mq('tb'){
                 margin-top: 0;
                 width: 350px;
