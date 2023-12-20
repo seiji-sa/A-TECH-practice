@@ -12,8 +12,8 @@
 
 $breakpoints: (
     dt:'screen and (min-width: 1024px)',
-    tb:'screen and (min-width: 768px)',
-    ph:'screen and (min-width: 680px)'
+    tb:'screen and (min-width: 680px)',
+    ph:'screen and (min-width: 480px)'
     )!default;
 
     @mixin mq($breakpoint: md) {

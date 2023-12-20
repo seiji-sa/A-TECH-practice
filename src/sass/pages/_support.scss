@@ -15,47 +15,60 @@
         grid-template-columns:  repeat(auto-fit, minmax(250px, 1fr));
         margin-bottom: 3rem;
         margin: 0 auto;
-        .support__item{
-            text-align: center;
-            img{
-                width: 200px;
-                padding: .5rem;
-                border-radius: 50%;
-                border: 2px solid $lightBlue;
-                margin: 1.5rem auto;
-            }
-            h3, p{
-                text-align: left;
-            }
+    }
+    .support__item{
+        text-align: center;
+        img{
+            width: 200px;
+            padding: .5rem;
+            border-radius: 50%;
+            border: 2px solid $lightBlue;
+            margin: 1.5rem auto;
+        }
+        .support__item_title{
+            text-align: left;
+            color: $lightBlue;
+            font-size: 1.12rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+        p{
+            text-align: left;
         }
     }
 
     .support-comment{
-        background: $white;
-        padding: 2rem 1rem;
+        background-color: $white;
+        padding: 30px 45px;
         border-radius: 1rem;
         text-align: center;
+        margin-top: 45px;
         .support-comment__txt_top{
             margin-bottom: 2rem;
             color: $lightBlue;
+            font-weight: bold;
         }
         .support-comment__list{
             color: $white;
-            @include mq('tb'){
+            @include mq(tb){
                 display: flex;
-                gap: 30px;
-                width: 100%;
-                .support-comment__item{
-                    // width: calc(50% - 30px);
-                     width: 50%;
-                    background-color: $lightBlue;
-                }
+                gap: 2rem 5%;
             }
-            li{
-                border-radius: 1rem;
-                margin-bottom: 2rem;
-                P{
-                    padding: 0 1.2rem 1.2rem;
+            .support-comment__item{
+                background-color: $lightBlue;
+                border-radius: 1.5rem;
+                padding: 2rem;
+                &:nth-child(1){
+                    margin-bottom: 2rem;
+                }
+                & p:nth-child(1){
+                    padding-bottom: 1rem;
+                    padding-top: 0px;
+                    font-weight: bold;
+                }
+                @include mq(tb){
+                    width: calc(50% - 5%);
                 }
                 .support-comment__list_title{
                     padding: 1rem 0 .5rem;

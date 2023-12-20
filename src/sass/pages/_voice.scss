@@ -2,15 +2,27 @@
 @use "../parts" as *;
 /*voice
 ==================================================*/
-    .voice__list{
-        @include mq('tb'){
+.voice-wrapper{
+    padding: 10% 1em;
+    max-width: 940px;
+    margin: 0 auto;
+    @include mq(tb){
+        padding: 4rem 1em;
+    }
+}
+
+.voice__list{
+    max-width: 280px;
+    margin: 3rem auto 0;
+    gap: 5rem 4%;
+        @include mq(tb){
             display: flex;
+            max-width: 600px;
         }
         .voice__item{
+            flex: 1;
             border-radius: 1rem;
             border: 4px solid $lightBlue;
-            max-width: 250px;
-            margin: 0 auto 4rem;
             padding: 1rem;
             text-align: center;
             img{
@@ -19,6 +31,8 @@
                 border: 3px solid lightBlue;
             }
             .voice__item_name{
+                background-color: $lightBlue;
+                color: $white;
                 margin-bottom: 15px;
                 border-radius: 1rem ;
             }

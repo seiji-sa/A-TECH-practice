@@ -1,14 +1,1 @@
 @use "../globals" as *;
-.section__title{
-    font-size: 1.6rem;
-    font-weight: bold;
-    @include mq('tb'){
-        br{
-            display: none;
-        }
-    }
-}
-
-.section__title strong{
-    font-size: 2rem;
-}

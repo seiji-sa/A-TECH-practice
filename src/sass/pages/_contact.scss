@@ -6,14 +6,22 @@
     background-color: rgba($lightBlue2, .1);
 .contact__list{
     display: block;
-    @include mq(tb){
-        display: flex;
-    }
+
 }
     p{
         text-align: center;
+        margin-bottom: 15px;
     }
     form{
+        max-width: 480px;
+        margin: 0 auto;
+        @include mq(tb){
+            max-width: 640px;
+        }
+        .contact__list_item{
+            display: flex;
+            align-items: center;
+        }
         label{
             color: $darkBlue;
             font-weight: bold;
@@ -21,12 +29,16 @@
         input,textarea{
             background-color: $white;
             width: 100%;
-            border-radius: 1rem;
+            border-radius: 1.5rem;
             border:0px solid #000;
             margin-bottom: 15px;
         }
         .form__name{
+            width: 150px;
             margin-bottom: 15px;
+        }
+        dd{
+            width: calc(100% - 150px);
         }
         p{
             background-color: $lightBlue;

@@ -6,30 +6,44 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    // outline: 1px solid red;
 }
 
 html{
     color: $black;
+    line-height: 1.75;
 }
+
 
 .section__title{
     text-align: center;
-    margin-bottom: 1.7rem;
-    font-weight: normal;
-    strong{
-        font-size: 2rem;
+    font-size: 1.75rem;
+    line-height: 1.6;
+    font-weight: bold;
+    margin-bottom: 8%;
+    @include mq(tb){
+        font-size: 2.1rem;
+        margin-bottom: 4rem;
+        br{
+            display: none;
+        }
     }
 }
+
+.section__title strong{
+    font-size: 2rem;
+}
+
 .l-wrapper{
     padding:0 1rem;
 }
 
 .m-wrapper{
-    max-width: 940px;
-    margin: 0 auto;
-    padding: 4em 1em;
+    padding: 10% 1em;
     @include mq(tb){
-        max-width: 1000px;
+        max-width: 940px;
+        margin: 0 auto;
+        padding: 4em 1em;
     }
 }
 

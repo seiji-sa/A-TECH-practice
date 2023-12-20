@@ -10,12 +10,15 @@
     }
     .learn-skill__title{
         text-align: center;
-        font-size: 1.7rem;
+        font-size: 1.75rem;
+        line-height: 1.7;
         margin-bottom: .82rem;
         color: $darkBlue;
+        margin-bottom: .5em;
+        font-weight: bold;
     }
     .learn__card_left,.learn__card_right,.learn-step{
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
     }  @include mq('tb'){
         .learn__card_left,.learn__card_right{
             width: calc(50% - 30px);
@@ -27,47 +30,50 @@
     .learn-list{
        text-align: center;
        width: 100%;
-       font-size: 0.8rem;
        font-weight: bold;
        padding: 1rem;
-       border-radius: 1rem;
-       line-height: 2.5rem;
+       border-radius: 1.5rem;
        background: $lightBlue;
     //    下にも余白つけたい
        .learn__skill{
            display: inline-block;
-           padding: 0 .3rem;
-           border-radius: .8rem;
-           margin: 0 .1rem;
+           padding: .6em;
+           min-width: 140px;
+           border-radius: 2rem;
+           margin: 0 .5em .6em 0;
            background-color: $white;
            color: $lightBlue;
+           line-height: 1;
+           font-weight: bold;
            }
      }
     .learn-step{
         max-width: 650px;
         margin: 0 auto;
-        border: 4px solid $lightBlue;
+        border: 5px solid $lightBlue;
         border-radius: 2rem;
         .learn-step__title{
             text-align: center;
             font-size: 1.4rem;
+            line-height: 1.3;
             font-weight: bold;
             padding: .5rem;
             color: $darkBlue;
             background-color: rgba($lightBlue2, .1)
         }
         .learn-step__content{
-            max-width: 500px;
+            max-width: 350px;
             margin: 0 auto;
             display: block;
-            padding: 1rem 2rem;
+            padding: 1em 2em;
             text-align: left;
             @include mq(tb){
                 display: flex;
                 flex-wrap: wrap;
-                gap: 10px;
+                gap: 0 1rem;
                 text-align: center;
-                max-width: 380px;
+                max-width: 500px;
+                padding: 2rem;
             }
             .learn-step__content_month{
                 display: inline-block;
@@ -76,6 +82,7 @@
                 border-radius: 1.5rem;
                 background-color: rgba($lightBlue2, .1);
                 color: $lightBlue;
+                margin-top: 1em;
                 @include mq(tb){
                     width: 125px;
                     padding: .5rem;
@@ -85,6 +92,7 @@
             .learn-step__content_txt{
                 max-width: 380px;
                 padding: .5rem 0 .6rem;
+                margin-top: 1em;
                 @include mq(tb){}
             }
         }

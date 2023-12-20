@@ -32,6 +32,8 @@
             margin: 0 auto;
             width: 48%;
             padding: 1rem;
+            border: 10px solid $white;
+            border-radius: 1.5rem;
             @include mq(tb){
                 padding: 1rem 1.5rem;
                 margin: 0 auto;
@@ -42,7 +44,7 @@
                 width: 106px;
                 margin: 0 auto;
                 aspect-ratio: auto 106 / 80;
-                border:4px solid #fff;
+                border:4px solid $white;
                 border-radius: 8%;
                 @include mq(tb){
                     width: 88px;

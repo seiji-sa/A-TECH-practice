@@ -5,8 +5,28 @@
 .section-select{
     background-color: rgba($lightBlue2, .1);
     counter-reset: number 0;
-    @include mq('dt'){
+    @include mq(tb){
         margin: 0 auto;
+    }
+    .section__title{
+        br{
+
+            display: block;
+        }
+        strong{
+            font-size: 3rem;
+        }
+    }
+    .underLine::after{
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 100%;
+        background-color: $lightBlue;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        display: block;
     }
 
     .section-select__list{

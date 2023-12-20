@@ -3,14 +3,17 @@
 /*provide
 ==================================================*/
 .section-provide{
-    background: $lightBlue;
+    background-color: $lightBlue;
     color: $white;
     .provide__card{
         // ギャプを使うためにグリッドにした
         display: grid;
-        gap: 15px;
+        gap: 2rem 3%;
+        max-width: 940px;
+        margin: 0 auto;
         @include mq('tb'){
             display: flex;
+            flex: 1;
             gap: 20px;
             .provide__card_left,.provide__card_right{
                 width: calc(50% - 20px);
@@ -25,34 +28,43 @@
             .more-wrapper_icon{
                 background-color: $white;
                 border-radius: 1rem 0 0 1rem;
-                width: 40%;
+                max-width: 100%;
                 display: flex;
                 justify-content: center;
+                padding: 1rem 2rem;
                 align-items: center;
                 img{
                     display: inline;
                 }
 
             }
-            .more-wrapper_lists{
-                text-align: center;
+            .more-wrapper_list{
+                display: flex;
+                flex: 1;
+                justify-content: center;
+                align-items: center;
                 width: 60%;
                 background-color: $white;
                 border-radius: 0 1rem 1rem 0;
+                font-weight: bold;
             }
         }
         .provide__card_right{
             // 後で必要になるかも
             .more-wrapper_img{
                 border-radius: 2rem;
-                max-width: 350px;
-                box-shadow: 10px 10px 0 $lightBlue2;
+                box-shadow: 10px 10px 0 #a1e3ff;
                 margin: 0 auto;
+                @include mq(tb){
+                    // max-width: 350px;
+
+                }
             }
             .more-wrapper_btn{
                 @extend .btn;
                 color: $darkBlue;
                 background-color: $white;
+                margin-top: 2rem;
 
 
             }
