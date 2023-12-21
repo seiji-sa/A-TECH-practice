@@ -30,6 +30,22 @@ html{
     }
 }
 
+.underLine{
+    position: relative;
+    display: inline-block;
+}
+.underLine::before{
+    position: absolute;
+    bottom: 5px;
+    left: -10%;
+    width: calc(100% + 20%);
+    height: 1em;
+    background: rgba($lightBlue2, .5);
+    content: '';
+    z-index: -1;
+    border-radius: .75em;
+}
+
 .section__title strong{
     font-size: 2rem;
 }
