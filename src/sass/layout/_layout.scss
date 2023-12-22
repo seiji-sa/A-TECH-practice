@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // outline: 1px solid red;
+    outline: 1px solid palegreen;
 }
 
 html{
@@ -14,14 +14,17 @@ html{
     line-height: 1.75;
 }
 
+img{
+    width: 100%;
+}
 
 .section__title{
     text-align: center;
     font-size: 1.75rem;
     line-height: 1.6;
-    font-weight: bold;
     margin-bottom: 8%;
     @include mq(tb){
+        font-weight: bold;
         font-size: 2.1rem;
         margin-bottom: 4rem;
         br{
