@@ -3,7 +3,7 @@
 /*lean
 ==================================================*/
     .learn__skill-container{
-        @include mq('tb'){
+        @include mq(tb){
             display: flex;
             gap: 30px;
         }

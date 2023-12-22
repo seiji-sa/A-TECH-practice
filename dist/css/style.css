@@ -477,6 +477,7 @@
 }
 .section-price .price__img {
   text-align: center;
+  margin-top: 8%;
   overflow-x: scroll;
 }
 .section-price .price__img img {
@@ -554,14 +555,14 @@
   background-color: #38B6FF;
   color: #fff;
 }
-@media screen and (min-width: 680px) {
-  .section-reason br {
-    display: none;
-  }
-}
 .section-reason .reason__title {
   font-size: 1.5rem;
   line-height: 1;
+}
+@media screen and (min-width: 680px) {
+  .section-reason .reason__title br {
+    display: none;
+  }
 }
 .section-reason .reason__title span {
   font-size: 2.5rem;
@@ -606,14 +607,17 @@
   padding: 1rem 0;
 }
 .section-reason .section-reason__list li img {
-  padding: 0 1rem;
+  padding: 1rem 2rem;
   margin: 0 auto;
   aspect-ratio: auto 106/80;
-  border: 10px solid #fff;
   border-radius: 1em;
+  border: 5px solid #fff;
+  max-width: 150px;
 }
 @media screen and (min-width: 680px) {
   .section-reason .section-reason__list li img {
+    max-width: 200px;
+    border: 10px solid #fff;
     padding: 1rem 3rem;
   }
 }
@@ -634,9 +638,14 @@
   display: block;
 }
 .section-select .section__title strong {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 @media screen and (min-width: 680px) {
+  .section-select .section__title strong {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 800px) {
   .section-select .section-select__list .list__item {
     display: flex;
     gap: 15px;
@@ -649,13 +658,14 @@
   position: relative;
   padding-left: 3rem;
   font-size: 1.5rem;
+  margin-left: 30px;
 }
 .section-select .section-select__list .list__item-txt_title::before {
   position: absolute;
   counter-increment: number 1;
   content: counter(number);
   color: #38B6FF;
-  left: 0%;
+  left: -15px;
   bottom: -15px;
   font-size: 4rem;
   font-weight: 100;
@@ -669,7 +679,7 @@
   margin: 2rem 10px 3rem;
   box-shadow: 10px 10px #38B6FF;
 }
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 800px) {
   .section-select .section-select__list .section__img {
     margin-top: 0;
     width: 350px;
@@ -1281,6 +1291,7 @@ img {
   font-size: 1.75rem;
   line-height: 1.6;
   margin-bottom: 8%;
+  font-weight: bold;
 }
 @media screen and (min-width: 680px) {
   .section__title {
@@ -1300,9 +1311,9 @@ img {
 
 .underLine::before {
   position: absolute;
-  bottom: 5px;
-  left: -10%;
-  width: 120%;
+  bottom: 0px;
+  left: -5%;
+  width: 110%;
   height: 1em;
   background: rgba(79, 205, 255, 0.5);
   content: "";

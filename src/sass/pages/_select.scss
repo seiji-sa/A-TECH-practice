@@ -14,12 +14,17 @@
             display: block;
         }
         strong{
-            font-size: 3rem;
+            font-size: 2rem;
+            @include mq(tb){
+                font-size: 3rem;
+
+            }
+
         }
     }
     .section-select__list{
         .list__item{
-            @include mq('tb'){
+            @include mq(md){
                 display: flex;
                 gap: 15px;
                 &:nth-child(odd){
@@ -31,12 +36,13 @@
             position: relative;
             padding-left: 3rem ;
             font-size: 1.5rem;
+            margin-left: 30px;
             &::before{
                 position: absolute;
                 counter-increment: number 1;
                 content: counter(number);
                 color: $lightBlue;
-                left: 0%;
+                left: -15px;
                 bottom: -15px;
                 font-size: 4rem;
                 font-weight: 100;
@@ -50,7 +56,7 @@
             width: calc(100% - 30px);
             margin: 2rem 10px 3rem;
             box-shadow: 10px 10px $lightBlue;
-            @include mq('tb'){
+            @include mq(md){
                 margin-top: 0;
                 width: 350px;
             }
