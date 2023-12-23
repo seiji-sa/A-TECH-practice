@@ -73,6 +73,7 @@
 @media screen and (min-width: 680px) {
   .hero-container {
     width: 100%;
+    padding: 3% 0 9%;
   }
 }
 .hero-container .hero-container__txt {
@@ -95,7 +96,7 @@
 @media screen and (min-width: 680px) {
   .hero-container .hero-container__txt .hero__txt_small {
     width: 600px;
-    margin: 0 auto;
+    margin: -7% auto 0;
   }
   .hero-container .hero-container__txt .hero__txt_small span {
     width: auto;
@@ -114,11 +115,16 @@
   .hero-container .hero-container__txt .hero__txt_wrapper {
     text-align: left;
     margin: 7rem -2rem 0;
-    margin-top: 50%;
+    margin-top: 10%;
   }
 }
 .hero-container .hero-container__txt .hero__txt_big .block {
   display: block;
+}
+@media screen and (min-width: 680px) {
+  .hero-container .hero-container__txt .hero__txt_big .block {
+    display: none;
+  }
 }
 .hero-container .hero-container__txt .hero__txt_big span {
   color: #224277;
@@ -174,6 +180,7 @@
 }
 @media screen and (min-width: 680px) {
   .hero-container .hero-container__txt .hero__list {
+    margin-top: 5%;
     justify-content: left;
   }
 }
@@ -224,6 +231,7 @@
   width: 90%;
   top: 0;
   right: 0;
+  height: 100%;
 }
 @media screen and (min-width: 680px) {
   .hero-bg {
@@ -296,7 +304,7 @@
 .learn-list .learn__skill {
   display: inline-block;
   padding: 0.6em;
-  min-width: 140px;
+  min-width: 120px;
   border-radius: 2rem;
   margin: 0 0.5em 0.6em 0;
   background-color: #fff;
@@ -712,6 +720,18 @@
 }
 .section-support .support__item {
   text-align: center;
+  position: relative;
+}
+.section-support .support__item::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: #38B6FF;
+  border-radius: 50%;
 }
 .section-support .support__item img {
   width: 200px;
@@ -811,6 +831,7 @@
   margin: 0 auto 15px;
   border-radius: 50%;
   border: 3px solid lightBlue;
+  width: 30%;
 }
 .voice__list .voice__item .voice__item_name {
   background-color: #38B6FF;
@@ -1322,6 +1343,24 @@ img {
   width: 110%;
   height: 1em;
   background: rgba(79, 205, 255, 0.5);
+  content: "";
+  z-index: -1;
+  border-radius: 0.75em;
+}
+
+.d-underLine {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.d-underLine::before {
+  position: absolute;
+  bottom: 0px;
+  left: -5%;
+  width: 110%;
+  height: 1em;
+  background: #224277;
   content: "";
   z-index: -1;
   border-radius: 0.75em;

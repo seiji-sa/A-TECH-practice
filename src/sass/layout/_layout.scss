@@ -49,21 +49,22 @@ img{
     z-index: -1;
     border-radius: .75em;
 }
-// .d-underLine{
-//     position: relative;
-//     display: inline-block;
-// }
-// .d-underLine::before{
-//     position: absolute;
-//     bottom: 0px;
-//     left: -5%;
-//     width: calc(100% + 10%);
-//     height: 1em;
-//     background: $darkBlue;
-//     content: '';
-//     z-index: -1;
-//     border-radius: .75em;
-// }
+.d-underLine{
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+.d-underLine::before{
+    position: absolute;
+    bottom: 0px;
+    left: -5%;
+    width: calc(100% + 10%);
+    height: 1em;
+    background: $darkBlue;
+    content: '';
+    z-index: -1;
+    border-radius: .75em;
+}
 
 .section__title strong{
     font-size: 2rem;
