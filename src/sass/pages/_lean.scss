@@ -3,7 +3,10 @@
 /*lean
 ==================================================*/
     .learn__skill-container{
+        max-width: 400px;
+        margin: 0 auto;
         @include mq(tb){
+            max-width: 2000px;
             display: flex;
             gap: 30px;
         }

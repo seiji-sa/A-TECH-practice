@@ -2,18 +2,17 @@
 @use "../parts" as *;
 /*hero
 ==================================================*/
+
 .hero-container{
     padding: 2rem 0;
-    margin-top: 4rem;
     text-align: center;
     @include mq(tb){
         width: 100%;
-        height: 50vh;
+        // height: 50vh;
         // margin-left: auto;
     }
     @include mq(tb){
-        margin-top: 8rem;
-        position: relative;
+
     }
     .hero-container__txt{
         // margin-top: 5rem headerも適応されて下に配置されるのはなぜ;
@@ -50,6 +49,7 @@
             @include mq(tb){
                 text-align: left;
                 margin:7rem -2rem 0;
+                margin-top: 50%;
             }
         }
         .hero__txt_big{
@@ -136,31 +136,39 @@
         }
     }
     }
-    .hero-bg{
-     position: relative;
-     width: 90%;
-     top: auto;
-     right: auto;
-     margin: -15% 0 0 auto;
-     padding-top: 100%;
-     @include mq(tb){
+    .hero{
         position: relative;
-        top: -214px;
-        right: 0px;
-        height: 0px;
-        padding-top: 30%;
-     }
-     img {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         @include mq(tb){
-             z-index: -1;
-            height: auto;
-         }
-     }
+        padding-bottom: 90%;
+        @include mq(tb){
+            padding-bottom: 0;
+            margin-top: 130px;
+        }
+
+    }
+    .hero-bg{
+        position: absolute;
+        width: 90%;
+        top: 0;
+        right: 0;
+        //  margin: -15% 0 0 auto;
+        // padding-top: 100%;
+        @include mq(tb){
+            top: 0;
+            right: 0px;
+            height: 100%;
+        }
+        img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+            height: 50%;
+            @include mq(tb){
+                height: 100%;
+            }
+        }
     }
 
 

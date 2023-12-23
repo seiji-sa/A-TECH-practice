@@ -68,19 +68,11 @@
 ==================================================*/
 .hero-container {
   padding: 2rem 0;
-  margin-top: 4rem;
   text-align: center;
 }
 @media screen and (min-width: 680px) {
   .hero-container {
     width: 100%;
-    height: 50vh;
-  }
-}
-@media screen and (min-width: 680px) {
-  .hero-container {
-    margin-top: 8rem;
-    position: relative;
   }
 }
 .hero-container .hero-container__txt {
@@ -122,6 +114,7 @@
   .hero-container .hero-container__txt .hero__txt_wrapper {
     text-align: left;
     margin: 7rem -2rem 0;
+    margin-top: 50%;
   }
 }
 .hero-container .hero-container__txt .hero__txt_big .block {
@@ -215,42 +208,55 @@
   }
 }
 
-.hero-bg {
+.hero {
   position: relative;
+  padding-bottom: 90%;
+}
+@media screen and (min-width: 680px) {
+  .hero {
+    padding-bottom: 0;
+    margin-top: 130px;
+  }
+}
+
+.hero-bg {
+  position: absolute;
   width: 90%;
-  top: auto;
-  right: auto;
-  margin: -15% 0 0 auto;
-  padding-top: 100%;
+  top: 0;
+  right: 0;
 }
 @media screen and (min-width: 680px) {
   .hero-bg {
-    position: relative;
-    top: -214px;
+    top: 0;
     right: 0px;
-    height: 0px;
-    padding-top: 30%;
+    height: 100%;
   }
 }
 .hero-bg img {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  height: 50%;
 }
 @media screen and (min-width: 680px) {
   .hero-bg img {
-    z-index: -1;
-    height: auto;
+    height: 100%;
   }
 }
 
 /*================================================*/
 /*lean
 ==================================================*/
+.learn__skill-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
 @media screen and (min-width: 680px) {
   .learn__skill-container {
+    max-width: 2000px;
     display: flex;
     gap: 30px;
   }
