@@ -101,6 +101,7 @@
             gap: 2rem 5%;
             @include mq(tb){
                 display: flex;
+                justify-content: center;
             }
             .support-comment__item{
                 background-color: $lightBlue;

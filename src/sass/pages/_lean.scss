@@ -9,6 +9,7 @@
             max-width: 2000px;
             display: flex;
             gap: 30px;
+            margin-bottom: 3rem;
         }
     }
     .learn-skill__title{
@@ -22,7 +23,7 @@
     }
     .learn__card_left,.learn__card_right,.learn-step{
         margin-bottom: 1.5rem;
-    }  @include mq('tb'){
+    }  @include mq(tb){
         .learn__card_left,.learn__card_right{
             width: calc(50% - 30px);
         }
