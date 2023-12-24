@@ -47,6 +47,23 @@
         height: 70px;
         border-radius: 0 0 0 22px;
         background-color: $lightBlue;
+        position: relative;
+        div{
+            background: $white;
+            height: 5px;
+            position: absolute;
+            display: block;
+            width: calc(100% - 60px);
+            border-radius: 1em;
+            top: 38%;
+            right: 30px;
+            &:nth-child(2){
+                top: 58%;
+                width: calc(100% - 70px);
+
+            }
+
+        }
         @include mq(dt){
             display: none;
         }

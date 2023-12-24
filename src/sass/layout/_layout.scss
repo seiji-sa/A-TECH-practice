@@ -53,6 +53,7 @@ img{
     position: relative;
     display: inline-block;
     z-index: 1;
+    margin-right: 15px;
 }
 .d-underLine::before{
     position: absolute;
@@ -60,7 +61,7 @@ img{
     left: -5%;
     width: calc(100% + 10%);
     height: 1em;
-    background: $darkBlue;
+    background: rgba($darkBlue, .5);
     content: '';
     z-index: -1;
     border-radius: .75em;

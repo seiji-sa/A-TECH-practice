@@ -4,9 +4,36 @@
 ==================================================*/
 .section-support{
     background-color: rgba($lightBlue2, .1);
-    @include mq('tb'){
+    @include mq(tb){
         .section__title br{
             display: none;
+        }
+    }
+    .section__title{
+        position: relative;
+        @include mq(tb){
+            .underLine{
+                margin-left: 15px;
+            }
+        }
+    }
+    & .section__title::after{
+        content: "無料\A オプション";
+        position: absolute;
+        bottom: 50%;
+        right: -2vw;
+        font-size: 1rem;
+        white-space: pre;
+        padding: 4%;
+        background: $white;
+        border-radius: 1rem;
+        border-width: 3px;
+        border-style: solid;
+        border-color: $lightBlue;
+        @include mq (tb){
+            padding: 1rem;
+            bottom: 0;
+            right: 5vw;
         }
     }
     .support__list{
@@ -15,13 +42,13 @@
         grid-template-columns:  repeat(auto-fit, minmax(250px, 1fr));
         margin-bottom: 3rem;
         margin: 0 auto;
+        counter-reset: number 0;
     }
     .support__item{
         text-align: center;
         position: relative;
         &::before{
             position: absolute;
-            content: "";
             top: 0;
             left: 50%;
             transform: translateX(-50%);
@@ -29,7 +56,13 @@
             height: 50px;
             background: $lightBlue;
             border-radius: 50%;
-
+            counter-increment: number 1;
+            content: counter(number);
+            color: $white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         img{
             width: 200px;
@@ -64,16 +97,17 @@
         }
         .support-comment__list{
             color: $white;
+            display: grid;
+            gap: 2rem 5%;
             @include mq(tb){
                 display: flex;
-                gap: 2rem 5%;
             }
             .support-comment__item{
                 background-color: $lightBlue;
                 border-radius: 1.5rem;
                 padding: 2rem;
                 &:nth-child(1){
-                    margin-bottom: 2rem;
+                    // margin-bottom: 2rem;
                 }
                 & p:nth-child(1){
                     padding-bottom: 1rem;

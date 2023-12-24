@@ -15,29 +15,48 @@
     max-width: 280px;
     margin: 3rem auto 0;
     gap: 5rem 4%;
+    display: grid;
         @include mq(tb){
             display: flex;
-            max-width: 600px;
+            max-width: 1000px;
+            margin-top: 10%;
         }
         .voice__item{
             flex: 1;
-            border-radius: 1rem;
+            border-radius: 0rem 2rem 2rem 2rem;
             border: 4px solid $lightBlue;
-            padding: 1rem;
+            padding: 20px 10px;
             text-align: center;
+            position: relative;
             img{
-                margin: 0 auto 15px;
+                margin-bottom:  1rem;
                 border-radius: 50%;
                 border: 3px solid lightBlue;
-                width: 30%;
+                width: 110px;
             }
             .voice__item_name{
                 background-color: $lightBlue;
                 color: $white;
                 margin-bottom: 15px;
-                border-radius: 1rem ;
+                border-radius: 1.5rem ;
+                padding: 10px 0;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                width: 60px;
+                height: 45px;
+                background-color: $lightBlue;
+                background-image: url(/images/svg/voice_icon.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                padding-bottom: 5px;
+                border-radius: 2rem 2rem 0 0;
+                bottom: 100%;
+                left: -5px;
             }
         }
+
 
     }
 

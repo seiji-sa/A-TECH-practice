@@ -58,13 +58,13 @@
         .learn-step__title{
             text-align: center;
             font-size: 1.4rem;
-            line-height: 1.3;
+            // line-height: 1.3;
             font-weight: bold;
             padding: .5rem;
             color: $darkBlue;
             background-color: rgba($lightBlue2, .1)
         }
-        .learn-step__content{
+        .learn-step__wrapper{
             max-width: 350px;
             margin: 0 auto;
             display: block;
@@ -78,26 +78,41 @@
                 max-width: 500px;
                 padding: 2rem;
             }
+            .learn-step__content {
+                display: block;
+                @include mq(tb){
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0 1rem;
+                }
+            }
+            .learn-step__content + .learn-step__content{
+                margin-top: 1em;
+            }
             .learn-step__content_month{
                 display: inline-block;
-                width: 150px;
-                padding: .2rem 2rem;
                 border-radius: 1.5rem;
+                padding: .5rem;
                 background-color: rgba($lightBlue2, .1);
                 color: $lightBlue;
-                margin-top: 1em;
+                width: 125px;
+                line-height: 1;
+                text-align: center;
+                font-weight: normal;
                 @include mq(tb){
-                    width: 125px;
-                    padding: .5rem;
+                    // padding: .2rem 2rem;
+                    // padding: .5rem;
                     line-height: 1;
                 }
             }
             .learn-step__content_txt{
                 max-width: 380px;
-                padding: .5rem 0 .6rem;
-                margin-top: 1em;
+                // padding: .5rem 0 .6rem;
+                margin-top: .5em;
                 @include mq(tb){}
             }
+
         }
     }
 

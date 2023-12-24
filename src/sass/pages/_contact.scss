@@ -19,8 +19,11 @@
             max-width: 640px;
         }
         .contact__list_item{
-            display: flex;
-            align-items: center;
+            display: block;
+            @include mq(tb){
+                display: flex;
+                align-items: center;
+            }
         }
         label{
             color: $darkBlue;
@@ -38,7 +41,10 @@
             margin-bottom: 15px;
         }
         dd{
-            width: calc(100% - 150px);
+            width: 100%;
+            @include mq(tb){
+                width: calc(100% - 150px);
+            }
         }
         p{
             background-color: $lightBlue;
