@@ -2,196 +2,163 @@
 @use "../parts" as *;
 /*hero
 ==================================================*/
-.hero{
-    position: relative;
-    padding: 15% 0 90%;
-    @include mq(tb){
-        padding: 0;
-        margin-top: 130px;
+.hero {
+  position: relative;
+  padding-top: 70px;
+  @include mq(tb) {
+    // padding: 70px 0 90%;
+  }
+  .hero-container {
+    .hero-container__txt {
+      // margin-top: 5rem headerも適応されて下に配置されるのはなぜ;
+      text-align: center;
+      @include mq(tb) {
+        margin: 0 auto;
+        max-width: 75%;
+        padding: 3% 0 9%;
+      }
+      .hero__txt_small {
+        width: 100%;
+        font-size: 1rem;
+        border-radius: 1.5rem;
+        padding: 1rem 3rem;
+        background-color: rgba($lightBlue, 0.6);
+        color: $white;
+        span {
+          display: inline-block;
+          width: 100%;
+          &:nth-last-child(1) {
+            margin-bottom: 0;
+          }
+        }
+        @include mq(tb) {
+          span {
+            width: auto;
+          }
+        }
+        @include mq(tb) {
+          padding: 0.5rem;
+          span {
+            display: inline;
+          }
+        }
+      }
+      .hero__txt_wrapper {
+        @include mq(tb) {
+          text-align: left;
+          margin: 10% 0 auto 0;
+        }
+      }
+      .hero__txt_big {
+        @include mq(tb) {
+          padding: 0 15px;
+        }
+        .block {
+          display: block;
+          // 実践的なのマージンの開け方スマホ
+          @include mq(tb) {
+            display: none;
+          }
+        }
+        span {
+          color: $darkBlue;
+          width: 100%;
+          display: inline-block;
+          &:nth-child(1) {
+            font-weight: 100;
+            font-size: 5.5vw;
+            @include mq(tb) {
+              font-size: 24px;
+            }
+          }
+          &:nth-child(2) {
+            font-weight: bold;
+            font-size: min(62px, 9vw);
+            // 文字の折り返しについて
+            @include mq(tb) {
+              font-size: 62px;
+            }
+          }
+          &:nth-child(3) {
+            font-weight: 100;
+            font-size: 7vw;
+            @include mq(tb) {
+              font-size: 42px;
+            }
+          }
+        }
+
+        @include mq(tb) {
+          display: inline-block;
+          text-align: center;
+          span {
+            display: block;
+          }
+          span:nth-child(2) {
+            font-size: 3.5rem;
+          }
+        }
+      }
+      .hero__list {
+        justify-content: start;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 4%;
+        margin-top: 2rem;
+        @include mq(tb) {
+          margin-top: 5%;
+          justify-content: left;
+        }
+        li {
+          max-width: 30%;
+          background-color: $lightBlue;
+          color: $white;
+          font-size: 12px;
+          font-weight: bold;
+          width: 142px;
+          border-radius: 1rem;
+          padding: 4% 0;
+          z-index: 1;
+          @include mq(tb) {
+            width: 150px;
+            height: 150px;
+            font-size: 15px;
+            padding: 40px 0 30px;
+            font-weight: bold;
+          }
+        }
+      }
     }
 }
-.hero-container{
-    padding: 2rem 0;
-    text-align: center;
-    @include mq(tb){
-        width: 100%;
-        padding: 3% 0 9%;
-        // height: 50vh;
-        // margin-left: auto;
+
+}
+.hero-bg {
+  position: relative;
+    width: 90%;
+    margin: -15% 0 0 auto;
+    padding-top: 100%;
+  @include mq(tb2) {
+    position: absolute;
+    padding-top: 0;
+    bottom: 0;
+    right: 0;
+     z-index: -1;
+     width: 80%;
+     height: 80%;
+ }
+   img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    @include mq(tb2) {
+      position: relative;
+
     }
-    .hero-container__txt{
-        // margin-top: 5rem headerも適応されて下に配置されるのはなぜ;
-        text-align: center;
-        .hero__txt_small{
-            font-size: 1rem;
-            border-radius: 1.5rem;
-            padding: 1rem 3rem;
-            margin: 0 1rem;
-            background-color: rgba($lightBlue, .6);
-            color: $white;
-            span{
-                display: inline-block;
-                width: 100%;
-                &:nth-last-child(1){
-                    margin-bottom: 0;
-                }
-            }
-            @include mq(tb){
-                width: 600px;
-                margin: -7% auto 0;
-                span{
-                    width: auto;
-                }
-            }
-            @include mq(tb){
-                width: 100%;
-                padding: .5rem;
-                span{
-                    display: inline;
-                }
-            }
-        }
-        .hero__txt_wrapper{
-            @include mq(tb){
-                text-align: left;
-                margin: 20% 0 auto 0;
-                max-width: 75%;
-                min-width: 640px;
-            }
-        }
-        .hero__txt_big{
-            .block{
-                display: block;
-                // 実践的なのマージンの開け方スマホ
-                @include mq(tb){
-                    display: none;
-                }
-            }
-            span{
-                color: $darkBlue;
-                width: 100%;
-                display: inline-block;
-                &:nth-child(1){
-                    font-weight: 100;
-                    font-size: 5.5vw;
-                    @include mq(tb){
-                        font-size: 24px;
-                    }
-                }
-                &:nth-child(2){
-                    font-weight: bold;
-                    font-size: min(62px,9vw);
-                    // 文字の折り返しについて
-                    @include mq(tb){
-                        font-size: 62px;
-                    }
-                }
-                &:nth-child(3){
-                    font-weight: 100;
-                    font-size: 7vw;
-                    @include mq(tb){
-                        font-size: 42px;
-                    }
-                }
-            }
-
-            @include mq(tb){
-                display: inline-block;
-                text-align: center;
-                span{
-                    display: block;
-                }
-                span:nth-child(2){
-                    font-size: 3.5rem;
-                }
-            }
-        }
-        .hero__list{
-            justify-content: start;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            gap: 4%;
-            margin-top: 2rem;
-            @include mq(tb){
-                margin-top: 5%;
-                justify-content: left;
-            }
-            li{
-                max-width: 30%;
-                background-color: $lightBlue;
-                color: $white;
-                font-size: 12px;
-                font-weight: bold;
-                width: 142px;
-                border-radius: 1rem;
-                padding: 4% 0;
-                z-index: 1;
-                @include mq(tb){
-                    width: 150px;
-                    height: 150px;
-                    font-size: 15px;
-                    padding: 40px 0 30px;
-                    font-weight: bold;
-                }
-            }
-        }
-        @include mq(tb){
-            margin: 0 auto;
-            width: 60%;
-            .hero__txt_big-left{
-                text-align: left;
-
-            }
-        }
-    }
-    }
-
-    .hero-bg{
-        position: absolute;
-        width: 90%;
-        top: 30px;
-        right: 0;
-        height: 100%;
-        //  margin: -15% 0 0 auto;
-        // padding-top: 100%;
-        @include mq(tb){
-            top: 0;
-            right: 0px;
-            height: 100%;
-        }
-        img {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            object-fit: cover;
-            z-index: -1;
-            height: 50%;
-            @include mq(tb){
-                height: 100%;
-            }
-        }
-    }
-
-
-
-
-    //    background: url("../../images/mainview_img.jpg") -220px 0px /  cover  no-repeat;
-    //    width: 90%;
-    //    height: 500px;
-    //    position: absolute;
-    //    bottom: 0;
-    //    right: 0;
-    //    z-index: -1;
-    //    @include mq('tb'){
-    //        background: url("../../images/mainview_img.jpg") 0px 0px /  cover  no-repeat;
-    //        width: 80%;
-    //        height: 70vh;
-    //        position: absolute;
-    //        top: 4rem;
-    //        z-index: -1;
-    //    }
+   }
+ }
 
 /*================================================*/
-

@@ -12,7 +12,7 @@
 ==================================================*/
 .header {
   width: 100%;
-  height: 65px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -84,122 +84,110 @@
 ==================================================*/
 .hero {
   position: relative;
-  padding: 15% 0 90%;
+  padding-top: 70px;
 }
-@media screen and (min-width: 680px) {
-  .hero {
-    padding: 0;
-    margin-top: 130px;
-  }
-}
-
-.hero-container {
-  padding: 2rem 0;
+.hero .hero-container .hero-container__txt {
   text-align: center;
 }
 @media screen and (min-width: 680px) {
-  .hero-container {
-    width: 100%;
+  .hero .hero-container .hero-container__txt {
+    margin: 0 auto;
+    max-width: 75%;
     padding: 3% 0 9%;
   }
 }
-.hero-container .hero-container__txt {
-  text-align: center;
-}
-.hero-container .hero-container__txt .hero__txt_small {
+.hero .hero-container .hero-container__txt .hero__txt_small {
+  width: 100%;
   font-size: 1rem;
   border-radius: 1.5rem;
   padding: 1rem 3rem;
-  margin: 0 1rem;
   background-color: rgba(56, 182, 255, 0.6);
   color: #fff;
 }
-.hero-container .hero-container__txt .hero__txt_small span {
+.hero .hero-container .hero-container__txt .hero__txt_small span {
   display: inline-block;
   width: 100%;
 }
-.hero-container .hero-container__txt .hero__txt_small span:nth-last-child(1) {
+.hero .hero-container .hero-container__txt .hero__txt_small span:nth-last-child(1) {
   margin-bottom: 0;
 }
 @media screen and (min-width: 680px) {
-  .hero-container .hero-container__txt .hero__txt_small {
-    width: 600px;
-    margin: -7% auto 0;
-  }
-  .hero-container .hero-container__txt .hero__txt_small span {
+  .hero .hero-container .hero-container__txt .hero__txt_small span {
     width: auto;
   }
 }
 @media screen and (min-width: 680px) {
-  .hero-container .hero-container__txt .hero__txt_small {
-    width: 100%;
+  .hero .hero-container .hero-container__txt .hero__txt_small {
     padding: 0.5rem;
   }
-  .hero-container .hero-container__txt .hero__txt_small span {
+  .hero .hero-container .hero-container__txt .hero__txt_small span {
     display: inline;
   }
 }
 @media screen and (min-width: 680px) {
-  .hero-container .hero-container__txt .hero__txt_wrapper {
+  .hero .hero-container .hero-container__txt .hero__txt_wrapper {
     text-align: left;
-    margin: 20% 0 auto 0;
-    max-width: 75%;
-    min-width: 640px;
+    margin: 10% 0 auto 0;
   }
 }
-.hero-container .hero-container__txt .hero__txt_big .block {
+@media screen and (min-width: 680px) {
+  .hero .hero-container .hero-container__txt .hero__txt_big {
+    padding: 0 15px;
+  }
+}
+.hero .hero-container .hero-container__txt .hero__txt_big .block {
   display: block;
 }
 @media screen and (min-width: 680px) {
-  .hero-container .hero-container__txt .hero__txt_big .block {
+  .hero .hero-container .hero-container__txt .hero__txt_big .block {
     display: none;
   }
 }
-.hero-container .hero-container__txt .hero__txt_big span {
+.hero .hero-container .hero-container__txt .hero__txt_big span {
   color: #224277;
   width: 100%;
   display: inline-block;
 }
-.hero-container .hero-container__txt .hero__txt_big span:nth-child(1) {
+.hero .hero-container .hero-container__txt .hero__txt_big span:nth-child(1) {
   font-weight: 100;
   font-size: 5.5vw;
 }
 @media screen and (min-width: 680px) {
-  .hero-container .hero-container__txt .hero__txt_big span:nth-child(1) {
+  .hero .hero-container .hero-container__txt .hero__txt_big span:nth-child(1) {
     font-size: 24px;
   }
 }
-.hero-container .hero-container__txt .hero__txt_big span:nth-child(2) {
+.hero .hero-container .hero-container__txt .hero__txt_big span:nth-child(2) {
   font-weight: bold;
   font-size: min(62px, 9vw);
 }
 @media screen and (min-width: 680px) {
-  .hero-container .hero-container__txt .hero__txt_big span:nth-child(2) {
+  .hero .hero-container .hero-container__txt .hero__txt_big span:nth-child(2) {
     font-size: 62px;
   }
 }
-.hero-container .hero-container__txt .hero__txt_big span:nth-child(3) {
+.hero .hero-container .hero-container__txt .hero__txt_big span:nth-child(3) {
   font-weight: 100;
   font-size: 7vw;
 }
 @media screen and (min-width: 680px) {
-  .hero-container .hero-container__txt .hero__txt_big span:nth-child(3) {
+  .hero .hero-container .hero-container__txt .hero__txt_big span:nth-child(3) {
     font-size: 42px;
   }
 }
 @media screen and (min-width: 680px) {
-  .hero-container .hero-container__txt .hero__txt_big {
+  .hero .hero-container .hero-container__txt .hero__txt_big {
     display: inline-block;
     text-align: center;
   }
-  .hero-container .hero-container__txt .hero__txt_big span {
+  .hero .hero-container .hero-container__txt .hero__txt_big span {
     display: block;
   }
-  .hero-container .hero-container__txt .hero__txt_big span:nth-child(2) {
+  .hero .hero-container .hero-container__txt .hero__txt_big span:nth-child(2) {
     font-size: 3.5rem;
   }
 }
-.hero-container .hero-container__txt .hero__list {
+.hero .hero-container .hero-container__txt .hero__list {
   justify-content: start;
   display: flex;
   justify-content: center;
@@ -208,12 +196,12 @@
   margin-top: 2rem;
 }
 @media screen and (min-width: 680px) {
-  .hero-container .hero-container__txt .hero__list {
+  .hero .hero-container .hero-container__txt .hero__list {
     margin-top: 5%;
     justify-content: left;
   }
 }
-.hero-container .hero-container__txt .hero__list li {
+.hero .hero-container .hero-container__txt .hero__list li {
   max-width: 30%;
   background-color: #38B6FF;
   color: #fff;
@@ -225,7 +213,7 @@
   z-index: 1;
 }
 @media screen and (min-width: 680px) {
-  .hero-container .hero-container__txt .hero__list li {
+  .hero .hero-container .hero-container__txt .hero__list li {
     width: 150px;
     height: 150px;
     font-size: 15px;
@@ -233,42 +221,35 @@
     font-weight: bold;
   }
 }
-@media screen and (min-width: 680px) {
-  .hero-container .hero-container__txt {
-    margin: 0 auto;
-    width: 60%;
-  }
-  .hero-container .hero-container__txt .hero__txt_big-left {
-    text-align: left;
-  }
-}
 
 .hero-bg {
-  position: absolute;
+  position: relative;
   width: 90%;
-  top: 30px;
-  right: 0;
-  height: 100%;
+  margin: -15% 0 0 auto;
+  padding-top: 100%;
 }
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 769px) {
   .hero-bg {
-    top: 0;
-    right: 0px;
-    height: 100%;
+    position: absolute;
+    padding-top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 80%;
+    height: 80%;
   }
 }
 .hero-bg img {
   position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   object-fit: cover;
-  z-index: -1;
-  height: 50%;
 }
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 769px) {
   .hero-bg img {
-    height: 100%;
+    position: relative;
   }
 }
 
