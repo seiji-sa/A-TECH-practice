@@ -121,10 +121,10 @@
           padding: 4% 0;
           z-index: 1;
           @include mq(tb) {
-            width: 150px;
-            height: 150px;
-            font-size: 15px;
-            padding: 40px 0 30px;
+            width: 125px;
+            height: 125px;
+            font-size: 13px;
+            padding: 34px 0;
             font-weight: bold;
           }
         }

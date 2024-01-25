@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid palegreen;
+    // outline: 1px solid palegreen;
 }
 
 html{
@@ -14,9 +14,8 @@ html{
     line-height: 1.75;
 }
 
-img{
+img:not(.reason__img){
     width: 100%;
-    height: auto;
 }
 
 .section__title{
