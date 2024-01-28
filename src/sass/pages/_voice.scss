@@ -18,7 +18,7 @@
     display: grid;
         @include mq(tb){
             display: flex;
-            max-width: 1000px;
+            max-width: 820px;
             margin-top: 10%;
         }
         .voice__item{
@@ -28,11 +28,14 @@
             padding: 20px 10px;
             text-align: center;
             position: relative;
+            @include mq(tb){
+
+            }
             img{
                 margin-bottom:  1rem;
                 border-radius: 50%;
                 border: 3px solid lightBlue;
-                width: 110px;
+                width: 100px;
             }
             .voice__item_name{
                 background-color: $lightBlue;

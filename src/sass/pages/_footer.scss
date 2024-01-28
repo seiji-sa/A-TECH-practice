@@ -12,12 +12,16 @@
             padding-bottom: 0;
         }
     }
+    @include mq(tb){
+        padding: 1rem 1rem 0;
+           }
     .footer__container{
         margin-bottom: 2rem;
         margin: 0 auto;
         padding: 0 15px 0;
         @include mq(tb){
-            max-width: 940px;
+            padding: 20px 10px 0;
+            max-width: 870px;
             display: flex;
             justify-content: space-between;
             .footer__container_right{
@@ -30,7 +34,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 250px;
+        width: 220px;
         margin: 0 auto;
         background: $white;
         padding: 1rem;

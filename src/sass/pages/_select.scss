@@ -57,8 +57,8 @@
             margin: 2rem 10px 3rem;
             box-shadow: 10px 10px $lightBlue;
             @include mq(md){
-                margin-top: 0;
-                width: 350px;
+                margin: 0px 10px 50px;
+                width: 400px;
             }
         }
     }

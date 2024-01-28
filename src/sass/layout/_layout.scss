@@ -26,7 +26,7 @@ img:not(.reason__img){
     font-weight: bold;
     @include mq(tb){
         font-weight: bold;
-        font-size: 2.1rem;
+        font-size: 2rem;
         margin-bottom: 4rem;
         br{
             display: none;
@@ -80,7 +80,7 @@ img:not(.reason__img){
     @include mq(tb){
         max-width: 940px;
         margin: 0 auto;
-        padding: 4em 1em;
+        padding: 3.5em 3em;
     }
 }
 

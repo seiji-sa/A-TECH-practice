@@ -5,8 +5,10 @@
 .hero {
   position: relative;
   padding-top: 70px;
+
   @include mq(tb) {
     // padding: 70px 0 90%;
+    padding-bottom: 3rem;
   }
   .hero-container {
     .hero-container__txt {

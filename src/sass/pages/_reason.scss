@@ -6,7 +6,11 @@
     text-align: center;
     background-color: $lightBlue;
     color: $white;
+.reason__container{
+    @include mq(tb){
 
+    }
+}
     .reason__title{
         font-size: 1.5rem;
         line-height: 1;

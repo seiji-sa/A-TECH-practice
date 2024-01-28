@@ -2,119 +2,130 @@
 @use "../parts" as *;
 /*lean
 ==================================================*/
-    .learn__skill-container{
-        max-width: 400px;
-        margin: 0 auto;
-        @include mq(tb){
-            max-width: 2000px;
-            display: flex;
-            gap: 30px;
-            margin-bottom: 3rem;
-        }
+.lean {
+  .m-wrapper {
+    @include mq(tb) {
+      padding-top: 0px !important;
     }
-    .learn-skill__title{
-        text-align: center;
-        font-size: 1.75rem;
-        line-height: 1.7;
-        margin-bottom: .82rem;
-        color: $darkBlue;
-        margin-bottom: .5em;
-        font-weight: bold;
+  }
+}
+.learn__skill-container {
+  max-width: 400px;
+  margin: 0 auto;
+  @include mq(tb) {
+    max-width: 2000px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 3rem;
+  }
+}
+.learn-skill__title {
+  text-align: center;
+  font-size: 1.75rem;
+  line-height: 1.7;
+  margin-bottom: 0.82rem;
+  color: $darkBlue;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+.learn__card_left,
+.learn__card_right,
+.learn-step {
+  margin-bottom: 1.5rem;
+}
+@include mq(tb) {
+  .learn__card_left,
+  .learn__card_right {
+    margin-bottom: 0px;
+    width: calc(50% - 30px);
+  }
+}
+.learn__card_cautionary {
+  margin-top: 1.3rem;
+}
+.learn-list {
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background: $lightBlue;
+  //    下にも余白つけたい
+  .learn__skill {
+    display: inline-block;
+    padding: 0.6em;
+    min-width: 120px;
+    border-radius: 2rem;
+    margin: 0 0.5em 0.6em 0;
+    background-color: $white;
+    color: $lightBlue;
+    line-height: 1;
+    font-weight: bold;
+  }
+}
+.learn-step {
+  max-width: 590px;
+  margin: 0 auto;
+  border: 5px solid $lightBlue;
+  border-radius: 2rem;
+  .learn-step__title {
+    text-align: center;
+    font-size: 1.4rem;
+    // line-height: 1.3;
+    font-weight: bold;
+    // padding: .5rem;
+    color: $darkBlue;
+    background-color: rgba($lightBlue2, 0.1);
+  }
+  .learn-step__wrapper {
+    max-width: 350px;
+    margin: 0 auto;
+    display: block;
+    padding: 1em 2em;
+    text-align: left;
+    @include mq(tb) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 1rem;
+      text-align: center;
+      max-width: 500px;
     }
-    .learn__card_left,.learn__card_right,.learn-step{
-        margin-bottom: 1.5rem;
-    }  @include mq(tb){
-        .learn__card_left,.learn__card_right{
-            width: calc(50% - 30px);
-        }
+    .learn-step__content {
+      display: block;
+      @include mq(tb) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 1rem;
+      }
     }
-    .learn__card_cautionary{
-        margin-top: 1.3rem;
+    .learn-step__content + .learn-step__content {
+      margin-top: 1em;
     }
-    .learn-list{
-       text-align: center;
-       width: 100%;
-       font-weight: bold;
-       padding: 1rem;
-       border-radius: 1.5rem;
-       background: $lightBlue;
-    //    下にも余白つけたい
-       .learn__skill{
-           display: inline-block;
-           padding: .6em;
-           min-width: 120px;
-           border-radius: 2rem;
-           margin: 0 .5em .6em 0;
-           background-color: $white;
-           color: $lightBlue;
-           line-height: 1;
-           font-weight: bold;
-           }
-     }
-    .learn-step{
-        max-width: 650px;
-        margin: 0 auto;
-        border: 5px solid $lightBlue;
-        border-radius: 2rem;
-        .learn-step__title{
-            text-align: center;
-            font-size: 1.4rem;
-            // line-height: 1.3;
-            font-weight: bold;
-            padding: .5rem;
-            color: $darkBlue;
-            background-color: rgba($lightBlue2, .1)
-        }
-        .learn-step__wrapper{
-            max-width: 350px;
-            margin: 0 auto;
-            display: block;
-            padding: 1em 2em;
-            text-align: left;
-            @include mq(tb){
-                display: flex;
-                flex-wrap: wrap;
-                gap: 0 1rem;
-                text-align: center;
-                max-width: 500px;
-                padding: 2rem;
-            }
-            .learn-step__content {
-                display: block;
-                @include mq(tb){
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 0 1rem;
-                }
-            }
-            .learn-step__content + .learn-step__content{
-                margin-top: 1em;
-            }
-            .learn-step__content_month{
-                display: inline-block;
-                border-radius: 1.5rem;
-                padding: .5rem;
-                background-color: rgba($lightBlue2, .1);
-                color: $lightBlue;
-                width: 125px;
-                line-height: 1;
-                text-align: center;
-                font-weight: normal;
-                @include mq(tb){
-                    // padding: .2rem 2rem;
-                    // padding: .5rem;
-                    line-height: 1;
-                }
-            }
-            .learn-step__content_txt{
-                max-width: 380px;
-                // padding: .5rem 0 .6rem;
-                margin-top: .5em;
-                @include mq(tb){}
-            }
-
-        }
+    .learn-step__content_month {
+      display: inline-block;
+      border-radius: 1.5rem;
+      padding: 0.5rem;
+      background-color: rgba($lightBlue2, 0.1);
+      color: $lightBlue;
+      width: 125px;
+      line-height: 1;
+      text-align: center;
+      font-weight: normal;
+      @include mq(tb) {
+        // padding: .2rem 2rem;
+        // padding: .5rem;
+        line-height: 1;
+      }
     }
+    .learn-step__content_txt {
+      max-width: 380px;
+      // padding: .5rem 0 .6rem;
+      margin-top: 0.5em;
+      @include mq(tb) {
+      }
+    }
+  }
+}
 
 /*================================================*/
