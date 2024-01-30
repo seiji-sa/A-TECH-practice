@@ -12,9 +12,9 @@
     background-color: rgba($white, .9);
     z-index: 2;
     align-items: center;
-    @include mq(tb){
-        height: 7%;
-    }
+    // @include mq(tb){
+    //     height: 7%;
+    // }
     .header__logo{
         padding: 0 1rem;
         width: 190px;

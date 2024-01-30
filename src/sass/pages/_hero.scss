@@ -22,7 +22,7 @@
       }
       .hero__txt_small {
         width: 100%;
-        font-size: 1rem;
+        font-size: 1.125rem;
         border-radius: 1.5rem;
         padding: 1rem 3rem;
         background-color: rgba($lightBlue, 0.6);
@@ -42,6 +42,12 @@
         @include mq(tb) {
           padding: 0.5rem;
           span {
+            display: inline;
+          }
+        }
+        .dot{
+          display: none;
+          @include mq(tb) {
             display: inline;
           }
         }
