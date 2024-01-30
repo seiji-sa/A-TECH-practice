@@ -12,6 +12,8 @@
 .learn__skill-container {
   max-width: 400px;
   margin: 0 auto;
+  margin-bottom: 65px;
+
   @include mq(tb) {
     max-width: 2000px;
     display: flex;

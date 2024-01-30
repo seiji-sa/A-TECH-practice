@@ -37,6 +37,9 @@
                 border: 3px solid lightBlue;
                 width: 100px;
             }
+            p:nth-child(3){
+                text-align: left;
+            }
             .voice__item_name{
                 background-color: $lightBlue;
                 color: $white;

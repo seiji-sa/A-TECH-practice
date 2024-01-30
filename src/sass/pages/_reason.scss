@@ -55,10 +55,11 @@
                 padding: 1rem 0;
             }
             .reason__list_img{
-                padding: 1.5em;
+                padding: .5em;
                 border-radius: 1em;
                 border:5px solid $white;
                 @include mq(tb){
+
                     border:10px solid $white;
                     padding: 1rem 3rem;
                 }

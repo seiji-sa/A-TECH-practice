@@ -4,7 +4,7 @@
 ==================================================*/
 .header{
     width: 100%;
-    height: 7%;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -12,6 +12,9 @@
     background-color: rgba($white, .9);
     z-index: 2;
     align-items: center;
+    @include mq(tb){
+        height: 7%;
+    }
     .header__logo{
         padding: 0 1rem;
         width: 190px;

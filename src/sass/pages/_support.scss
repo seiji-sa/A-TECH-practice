@@ -20,11 +20,13 @@
     & .section__title::after{
         content: "無料\A オプション";
         position: absolute;
-        bottom: 50%;
-        right: -2vw;
+        // bottom: 50%;
+        // right: -2vw;
+        bottom: 45%;
+        right: 1vw;
         font-size: 1rem;
         white-space: pre;
-        padding: 4%;
+        padding: 3%;
         background: $white;
         border-radius: 1rem;
         border-width: 3px;
@@ -86,10 +88,14 @@
 
     .support-comment{
         background-color: $white;
-        padding: 30px 45px;
         border-radius: 1rem;
         text-align: center;
         margin-top: 45px;
+        padding: 30px 15px;
+        @include mq(tb){
+            padding: 30px 45px;
+
+        }
         .support-comment__txt_top{
             margin-bottom: 2rem;
             color: $lightBlue;
@@ -106,7 +112,7 @@
             .support-comment__item{
                 background-color: $lightBlue;
                 border-radius: 1.5rem;
-                padding: 1rem;
+                padding: 30px;
                 &:nth-child(1){
                     // margin-bottom: 2rem;
                 }

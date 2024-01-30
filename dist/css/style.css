@@ -12,7 +12,7 @@
 ==================================================*/
 .header {
   width: 100%;
-  height: 7%;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -20,6 +20,11 @@
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 2;
   align-items: center;
+}
+@media screen and (min-width: 680px) {
+  .header {
+    height: 7%;
+  }
 }
 .header .header__logo {
   padding: 0 1rem;
@@ -93,6 +98,9 @@
   .hero {
     padding-bottom: 3rem;
   }
+}
+.hero .hero-container {
+  padding: 0.9rem;
 }
 .hero .hero-container .hero-container__txt {
   text-align: center;
@@ -273,6 +281,7 @@
 .learn__skill-container {
   max-width: 400px;
   margin: 0 auto;
+  margin-bottom: 65px;
 }
 @media screen and (min-width: 680px) {
   .learn__skill-container {
@@ -658,7 +667,7 @@
   padding: 1rem 0;
 }
 .section-reason .section-reason__list li .reason__list_img {
-  padding: 1.5em;
+  padding: 0.5em;
   border-radius: 1em;
   border: 5px solid #fff;
 }
@@ -692,6 +701,9 @@
     font-size: 3rem;
   }
 }
+.section-select .m-wrapper {
+  padding: 2rem 0;
+}
 @media screen and (min-width: 800px) {
   .section-select .section-select__list .list__item {
     display: flex;
@@ -711,10 +723,10 @@
   position: absolute;
   counter-increment: number 1;
   content: counter(number);
-  color: #38B6FF;
-  left: -15px;
-  bottom: -15px;
-  font-size: 4rem;
+  color: rgba(56, 182, 255, 0.7);
+  left: -20px;
+  bottom: -30px;
+  font-size: 5rem;
   font-weight: 100;
 }
 .section-select .section-select__list .list__item-txt_article {
@@ -755,11 +767,11 @@
 .section-support .section__title::after {
   content: "無料\aオプション";
   position: absolute;
-  bottom: 50%;
-  right: -2vw;
+  bottom: 45%;
+  right: 1vw;
   font-size: 1rem;
   white-space: pre;
-  padding: 4%;
+  padding: 3%;
   background: #fff;
   border-radius: 1rem;
   border-width: 3px;
@@ -822,10 +834,15 @@
 }
 .section-support .support-comment {
   background-color: #fff;
-  padding: 30px 45px;
   border-radius: 1rem;
   text-align: center;
   margin-top: 45px;
+  padding: 30px 15px;
+}
+@media screen and (min-width: 680px) {
+  .section-support .support-comment {
+    padding: 30px 45px;
+  }
 }
 .section-support .support-comment .support-comment__txt_top {
   margin-bottom: 2rem;
@@ -846,7 +863,7 @@
 .section-support .support-comment .support-comment__list .support-comment__item {
   background-color: #38B6FF;
   border-radius: 1.5rem;
-  padding: 1rem;
+  padding: 30px;
 }
 .section-support .support-comment .support-comment__list .support-comment__item p:nth-child(1) {
   padding-bottom: 1rem;
@@ -903,6 +920,9 @@
   border-radius: 50%;
   border: 3px solid lightBlue;
   width: 100px;
+}
+.voice__list .voice__item p:nth-child(3) {
+  text-align: left;
 }
 .voice__list .voice__item .voice__item_name {
   background-color: #38B6FF;
@@ -1005,7 +1025,12 @@
 
 /*================================================*/
 html {
-  font-size: 14px;
+  font-size: 15px;
+}
+@media screen and (min-width: 680px) {
+  html {
+    font-size: 14px;
+  }
 }
 
 img {

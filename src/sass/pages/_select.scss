@@ -3,65 +3,68 @@
 /*select
 ==================================================*/
 
-.section-select{
-    background-color: rgba($lightBlue2, .1);
-    counter-reset: number 0;
-    @include mq(tb){
-        margin: 0 auto;
+.section-select {
+  background-color: rgba($lightBlue2, 0.1);
+  counter-reset: number 0;
+  @include mq(tb) {
+    margin: 0 auto;
+  }
+  .section__title {
+    br {
+      display: block;
     }
-    .section__title{
-        br{
-            display: block;
-        }
-        strong{
-            font-size: 2rem;
-            @include mq(tb){
-                font-size: 3rem;
-
-            }
-
-        }
+    strong {
+      font-size: 2rem;
+      @include mq(tb) {
+        font-size: 3rem;
+      }
     }
-    .section-select__list{
-        .list__item{
-            @include mq(md){
-                display: flex;
-                gap: 15px;
-                &:nth-child(odd){
-                    flex-direction: row-reverse;
-                }
-            }
+  }
+  .m-wrapper {
+    padding: 2rem 0;
+  }
+  .section-select__list {
+    .list__item {
+      @include mq(md) {
+        display: flex;
+        gap: 15px;
+        &:nth-child(odd) {
+          flex-direction: row-reverse;
         }
-        .list__item-txt_title{
-            position: relative;
-            padding-left: 3rem ;
-            font-size: 1.5rem;
-            margin-left: 30px;
-            &::before{
-                position: absolute;
-                counter-increment: number 1;
-                content: counter(number);
-                color: $lightBlue;
-                left: -15px;
-                bottom: -15px;
-                font-size: 4rem;
-                font-weight: 100;
-            }
-        }
-        .list__item-txt_article{
-            margin-top: 15px;
-        }
-        .section__img{
-            border-radius: 2rem;
-            width: calc(100% - 30px);
-            margin: 2rem 10px 3rem;
-            box-shadow: 10px 10px $lightBlue;
-            @include mq(md){
-                margin: 0px 10px 50px;
-                width: 400px;
-            }
-        }
+      }
     }
-
+    .list__item-txt_title {
+      position: relative;
+      padding-left: 3rem;
+      font-size: 1.5rem;
+      margin-left: 30px;
+      &::before {
+        position: absolute;
+        counter-increment: number 1;
+        content: counter(number);
+        color: rgba($lightBlue , .7);
+        left: -20px;
+        bottom: -30px;
+        font-size: 5rem;
+        // left: -15px;
+        // bottom: -15px;
+        // font-size: 4rem;
+        font-weight: 100;
+      }
+    }
+    .list__item-txt_article {
+      margin-top: 15px;
+    }
+    .section__img {
+      border-radius: 2rem;
+      width: calc(100% - 30px);
+      margin: 2rem 10px 3rem;
+      box-shadow: 10px 10px $lightBlue;
+      @include mq(md) {
+        margin: 0px 10px 50px;
+        width: 400px;
+      }
+    }
+  }
 }
 /*================================================*/
